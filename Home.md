@@ -3,7 +3,7 @@ Basic instructions for getting up and running with opam:
     <install latest opam from github.com/OCamlPro/opam>
     $ rm -rf ~/.opam
     $ opam init default http://mirage.github.com/opam
-    $ opam install core
+    $ opam install <package-of-your-choice>
     $ opam upgrade
 
 Some issues to watch out for:
