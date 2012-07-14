@@ -20,9 +20,10 @@ Some issues to watch out for:
 
   - The extra call to  `opam upgrade` is necessary to deal with some
     incorrect version choices, but that is being fixed soon.
-  - you'll occasionally get errors on individual packages.  If you
-    just retry `opam install` on the dependency that failed, that
-    seems to clear it up.
+  - installing a package as a dependency doesn't always give the same
+    version as installing directly --- the direct-installed packages
+    generally being more recent.  You can work around this by doing
+    the direct install in a shell loop, but it's obviously not ideal.
   - Right now, `topfind` is not installed.  This is also being worked
     on.
   
