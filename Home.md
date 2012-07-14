@@ -25,6 +25,7 @@ Some issues to watch out for:
     generally being more recent.  You can work around this by doing
     the direct install in a shell loop, but it's obviously not ideal.
   - Right now, `topfind` is not installed.  This is also being worked
-    on.
+    on, but at the moment, you can't easily use ocamlfind and the top
+    level with opam-installed packages.
   
 
