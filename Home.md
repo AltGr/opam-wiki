@@ -6,6 +6,16 @@ Basic instructions for getting up and running with opam:
     $ opam install <package-of-your-choice>
     $ opam upgrade
 
+You'll also need to prepare your environment for using opam, which can be done by running.
+
+    $ eval `opam config -env`
+
+or 
+    
+    $ export `opam config -env`
+
+depending on your shell.
+
 Some issues to watch out for:
 
   - The extra call to  `opam upgrade` is necessary to deal with some
