@@ -9,10 +9,8 @@ You'll also need to prepare your environment for using opam, which can be done b
 
     $ eval `opam config -env`
 
-Some issues to watch out for:
+In order to use ocaml and topfind:
 
-  - Right now, `topfind` is not installed.  This is also being worked
-    on, but at the moment, you can't easily use ocamlfind and the top
-    level with opam-installed packages.
-  
-
+    $ opam install ocamlfind
+    $ ocaml -I $OCAML_TOPLEVEL_PATH
+    > #use "topfind"
