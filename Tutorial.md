@@ -243,10 +243,6 @@ short primer for the most useful features.
   switch* therefore takes the time it needs for your system to compile
   OCaml 4.00.0.
 
-* `opam switch -install 4.00.0` will install OCaml 4.00.0, but will
-  not switch to it immediately. You have to manually do `opam switch
-  4.00.0` in order to do so.
-
 * `opam switch -remove <version>` will just delete an opam-installed
   compiler from your system, thus freeing some disk space.
 
