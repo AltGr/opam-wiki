@@ -4,5 +4,7 @@ cd opam
 ./configure --prefix=$HOME                      # configure and set the prefix
 make && make install                            # compile and install
 opam init                                       # Initialize OPAM for your system
+eval `opam config -env`                         # Update your environment for OPAM
+echo "eval `opam config -env`" >> ~/.bashrc     # Make your shell ready for OPAM
 opam install core lwt                           # Install packages
 ```
