@@ -34,10 +34,9 @@ $ make install
 
 And that’s all the information you need to build an OPAM package.
 
-A minimum OPAM package is a directory containing three files,
-respectively *descr*, *opam*, and *url*. The name of the directory is
-`<package-name>.<package-version>`. In our case, the directory
-will thus be `ounit.1.1.2` and contain the following files:
+A minimum OPAM package is a directory containing three files: `descr`, `opam`, and `url`.
+The name of the directory defines the package name and version: `<package-name>.<package-version>`.
+In our case, the directory will be `ounit.1.1.2` and contain the following files:
 
 - `descr`
 
@@ -83,8 +82,8 @@ description starting from the second line.
 The full ABNF specification of the syntax for *opam* files is
 available in OPAM’s specification document. In this file,
 `opam-version` MUST be `1`, and you should put your email in the
-`maintainer` field. `build` is has OCaml type `string list list`, and
-represent the build instructions. Here,
+`maintainer` field. `build` has OCaml type `string list list`, and
+contains the build instructions. Here,
 
 ```
 $ make build
@@ -101,22 +100,26 @@ build: [
 ```
 
 You should adapt this to the required commands to build your package,
-each line you have to type on your shell corresponding here to a
+and on each line contains the shell commands corresponding to a
 `string list`.
 
 The `remove` field follows the same syntax as the `build` field. The
-`depends` field is a `string list` of dependencies, each dependency
+`depends` field is a `string list` of dependencies, and each dependency
 being another OPAM package. Here *ounit* depends only on *ocamlfind*.
 
 ### `url`
 
 This file contains at least one `archive` line containing the URL of
 the source package, and optionally a `checksum` line that must contain
-the md5sum of the source package if it is present. It is good practice
+the MD5 sum of the source package if it is present. It is good practice
 to systematically add a checksum line to your packages, unless the
 source package has no fixed version (the typical example being a
 source package hosted on *github* with no tags). This checksum will be
 checked when creating and installing the package.
+
+The URL can also contain a single `git` field instead of `archive`, which
+points to GIT repository URL.  This will be checked out and updated every
+time `opam update` is run, which is useful for development packages.
 
 # Advanced OPAM packaging guide
 
@@ -124,8 +127,8 @@ This section will be as comprehensive as possible on the art of
 creating OPAM packages, but in case of ambiguities, the ABNF syntax
 documentation has priority.
 
-Everything has already be said about files `descr` and `url`, the
-additions of this section involve only the `opam` files.
+Since everything has already be said about the `descr` and `url` files,
+this section only involves the `opam` files.
 
 ## OPAM variables
 
