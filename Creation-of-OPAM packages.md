@@ -80,7 +80,7 @@ description starting from the second line.
 ### `opam`
 
 The full ABNF specification of the syntax for *opam* files is
-available in OPAM’s specification document. In this file,
+available in OPAM’s [specification document](https://github.com/OCamlPro/opam/blob/master/doc/specs/roadmap.pdf). In this file,
 `opam-version` MUST be `1`, and you should put your email in the
 `maintainer` field. `build` has OCaml type `string list list`, and
 contains the build instructions. Here,
@@ -100,11 +100,11 @@ build: [
 ```
 
 You should adapt this to the required commands to build your package,
-and on each line contains the shell commands corresponding to a
+and each line contains the shell commands corresponding to a
 `string list`.
 
 The `remove` field follows the same syntax as the `build` field. The
-`depends` field is a `string list` of dependencies, and each dependency
+`depends` field is a `string list` of dependencies, with each dependency
 being another OPAM package. Here *ounit* depends only on *ocamlfind*.
 
 ### `url`
@@ -154,13 +154,14 @@ variable.
 
 ## Optional dependencies
 
-In the OPAM tutorial, we mentionned the ability of OPAM to specify
-optional dependencies for packages. We said thatif a package has
-optional dependencies, they will not be installed automatically but
-they will be taken into account if they are present before the package
-(that optionally depends on them). Let us see how it works from the
-point of view of the package. The following example shows the `opam`
-file of package *lwt*:
+We mentioned the ability to specify optional dependencies for packages.
+If a package has optional dependencies, they will not be installed automatically,
+but will be taken into account if they are present *before* the installation.
+If the optional dependency is not present, but are subsequently installed,
+then the depending package will also be recompiled to take advantage of the newly
+installed library.
+
+Let us see how it works via the following example, which shows the `opam` file of the *lwt* package:
 
 ```
 opam-version: "1"
@@ -177,13 +178,13 @@ depends: ["ocamlfind"]
 depopts: ["base-threads" "base-unix" "conf-libev" "ssl" "react"]
 ```
 
-You can notice a new field, `depopts`. It contains the list of
-optional dependencies, specified in the same format as for the
+Notice the new `depopts` field, which contains the list of
+optional dependencies, specified in the same format as the
 `depends` field.
 
-You can also notice a new syntax for substitutions of the form
-`%{<package>:enable}%`. The semantic of this is that if *package* is
-installed, the pattern will be replaced by `enable`, otherwise by
+Also notice a new syntax for substitutions of the form
+`%{<package>:enable}%`. If *package* is
+installed, this pattern will be replaced by `enable`, otherwise by
 `disable`. This ease the building of lines of type `./configure
 --enable-<feature1> --disable-<feature2>`.
 
@@ -240,17 +241,17 @@ misc: []
 ```
 
 This has the semantic: *install the file of path
-`_build/test/xmltrip.native` relatively to the root of the source
+`_build/test/xmltrip.native` relative to the root of the source
 package into the directory returned by the command `opam config -var
 bin` under the name `xmltrip`*. You can install additional libraries
 and toplevels the same way. For comprehensive information about this
-facility refer to the OPAM specification document.
+facility refer to the OPAM [specification](https://github.com/OCamlPro/opam/blob/master/doc/specs/roadmap.pdf).
 
 ## Compiler version constraints
 
 Some packages require a specific OCaml version to work and thus can
 only be installed under specific compiler versions. To specify such a
-constraint in a package, you can add a field `ocaml-version: [ <
+constraint, you can add a field `ocaml-version: [ <
 "4.00.0" ]` to the `opam` file. This particular constraint implies
 that the package cannot be built or installed under OCaml 4.00.0 or
 later.
@@ -260,6 +261,6 @@ later.
 Although this tutorial covered most packaging cases, there are still
 packages that requires more tuning that what have been described
 above. If you find yourself stuck trying to package a software or a
-library, please read the OPAM specification (you will find it in the
+library, please read the OPAM [specification](https://github.com/OCamlPro/opam/blob/master/doc/specs/roadmap.pdf) (you will find it in the
 `doc` directory in the OPAM tarball) and/or read existing OPAM
 package descriptions for inspiration.
