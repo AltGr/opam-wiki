@@ -20,15 +20,13 @@ Let get started by learning from the *ounit* OPAM package. This is a
 widely used OCaml library to create unit tests for OCaml projects, and
 is a perfect example of a minimalistic yet complete package.
 
-By reading about *ounit* on the upstream website, you learn that it is
-a library to create unit tests, that its last version is *1.1.2*, and
-that it depends on *ocamlfind*. You know at which URL you can download
-its source tarball, and you can compute the *md5sum* of the this
-source tarball (by running `md5sum ounit-1.1.2.tar.gz`).
+By reading about *ounit* on the [upstream website](http://ounit.forge.ocamlcore.org),
+you learn that it is a library to create unit tests, that its latest version 
+is *1.1.2*, and that it depends on *[ocamlfind](http://projects.camlcity.org/projects/findlib.html/)*.
+You know the URL you can download its source tarball, and you must compute the *md5sum* of 
+this source tarball by running `md5sum ounit-1.1.2.tar.gz` (or, on some operating systems, `md5` instead of `md5sum`).
 
-You also learn that to build and install it, you have to
-do
-
+You also learn that to build and install it, you have to:
 ```
 $ make build
 $ make install
