@@ -29,9 +29,10 @@ You know the URL you can download its source tarball, and you must compute the *
 this source tarball by running `md5sum ounit-1.1.2.tar.gz` (or, on some operating systems, `md5` instead of `md5sum`).
 
 You also learn that to build and install it, you have to:
+
 ```
-$ make build
-$ make install
+make build
+make install
 ```
 
 And that’s all the information you need to build an OPAM package.
@@ -88,8 +89,8 @@ available in OPAM’s [specification document](https://github.com/OCamlPro/opam/
 contains the build instructions. Here,
 
 ```
-$ make build
-$ make install
+make build
+make install
 ```
 
 gets translated into
@@ -242,10 +243,10 @@ toplevel: []
 misc: []
 ```
 
-This has the semantic: *install the file of path
+This has the semantic: “install the file of path
 `_build/test/xmltrip.native` relative to the root of the source
 package into the directory returned by the command `opam config -var
-bin` under the name `xmltrip`*. You can install additional libraries
+bin` under the name `xmltrip`”. You can install additional libraries
 and toplevels the same way. For comprehensive information about this
 facility refer to the OPAM [specification](https://github.com/OCamlPro/opam/blob/master/doc/specs/roadmap.pdf).
 
