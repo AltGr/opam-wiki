@@ -72,15 +72,15 @@ To compile opam (binaries will be installed in `/usr/local/bin`),
 simply run:
 
 ```
-$ ./configure
-$ make
+./configure
+make
 ```
 
 To have OPAM installed in a specific location, please do
 
 ```
-$ ./configure --prefix=/the/opam/path
-$ make
+./configure --prefix=/the/opam/path
+make
 ```
 
 This will fetch the necessary archives if they are not already
@@ -95,7 +95,7 @@ FETCH=wget clone` before `make`.
 To install opam simply run:
 
 ```
-# make install
+sudo make install
 ```
 
 OPAM will be installed under `$prefix`, that is under `/usr/local` if
@@ -109,8 +109,8 @@ location you specified.
 Before using OPAM, you need to initialize its state. Start by doing:
 
 ```
-$ opam init
-$ eval `opam config -env`
+opam init
+eval `opam config -env`
 ```
 
 This will:
@@ -137,7 +137,7 @@ the list of all available packages, their versions, etc. To be sure
 this state reflects the state of your remote repositories, just run:
 
 ```
-$ opam update
+opam update
 ```
 
 This command will update the locally-saved states of your repositories
@@ -150,7 +150,7 @@ You are now ready to install packages. But first you probably want to
 see what packages are available and get some info about those
 packages.
 
-#### ```$ opam list``` 
+#### ``opam list`` 
 
 This will display as many lines as there are packages available, and
 each line displays the name of the package, its version if it is
@@ -160,13 +160,13 @@ real OPAM packages, but modules that may or may not be distributed
 with you OCaml installation. The *base* packages are just an
 indication of whether the compiler comes with these modules or not.
 
-#### ```$ opam search foo```
+#### ``opam search foo``
 
 This will display something similar to `opam list` except for it is
 only going to display available packages whose name or description
 match the string *foo*.
 
-#### ```$ opam info opam```
+#### ``opam info opam``
 
 This will display information about the package *opam*. This
 information includes the installed version if the package is
@@ -179,7 +179,7 @@ We are now ready to install some packages. Suppose you want to install
 the package *lwt*:
 
 ```
-$ opam install lwt
+opam install lwt
 ```
 
 If the package to be installed has no dependencies or if all its
@@ -212,7 +212,7 @@ you installed got updated upstream, and it is now possible to upgrade
 them on your system. Just type:
 
 ```
-$ opam upgrade
+opam upgrade
 ```
 
 to upgrade your packages. The dependency solver will be called to make
@@ -291,7 +291,7 @@ into the currently selected compiler.
 ### Version pinning
 
 ```
-$ opam pin <package> </local/path>
+opam pin <package> </local/path>
 ```
 
 This command will use the content of `</local/path>` to compile `<package>`. This means
@@ -303,7 +303,7 @@ will recompile `<package>` (and its forward dependencies) if needed.
 To unpin a package, simply run:
 
 ```
-$ opam pin <package> none
+opam pin <package> none
 ```
 
 You can also pin a package to a specific version: `opam pin <package> <version>`
