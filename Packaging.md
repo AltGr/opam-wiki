@@ -1,3 +1,5 @@
+# Creating OPAM packages
+
 In this tutorial, you will learn how to package an OCaml library or
 software for OPAM. The first section will introduce you the *ounit*
 OPAM package. Albeit simple, it is a real example of what an OPAM
