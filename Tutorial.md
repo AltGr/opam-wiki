@@ -1,3 +1,5 @@
+# Tutorial
+
 OPAM stands for OCaml PAckage Manager. It aims to suit to a vast
 number of users and use cases, and has unique features:
 
