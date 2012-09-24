@@ -1,3 +1,5 @@
+# Developing with OPAM
+
 The goal of this tutorial is to give some insights about how
 efficiently use OPAM to ease the development of an OCaml
 software. Mostly we’re going to study some real cases of projects
