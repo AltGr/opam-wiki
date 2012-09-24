@@ -110,13 +110,17 @@ package for this specific version in your own personal repository —
 just copy the directory of the corresponding package and hack it to
 adapt to the version you need. You can then do:
 
-```$ opam pin <package> <version>```
+```
+$ opam pin <package> <version>
+```
 
 to make OPAM use this specific version of the library and prevent
 OPAM to upgrade it with the other OPAM packages on `opam upgrade`s. If
 you need a modified version of an OPAM library, you should use:
 
-```$ opam pin <path>```
+```
+$ opam pin <path>
+```
 
 to instruct OPAM to use a given path (in the filesystem’s sense) to
 use as a source for a package. This way, you can download the version
