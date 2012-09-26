@@ -175,8 +175,19 @@ additional repository that contains all development packages required
 to build the development version of the project. When you add
 repositories with `opam remote`, if the same package — that is, same
 name and same version, which identify a package under OPAM — is
-present in two repositories, the one from the most recently added
-repository will be used. This implies a possibility of a workflow that
+present in two repositories, the one from the repository you added
+first will be used.
+
+This default priority for repositories can be **fine-tuned** on a
+package basis by editing `~/.opam/repo/index`: for each package, one
+or more repositories are specified, in the case there is more than
+one, the order of the repositories reflects the order in which OPAM
+will try to get the package from them, the first being the most
+prioritary. You can edit this file by hand, thus changing this order,
+just don’t forget do to a `opam update` afterwards.
+
+
+This implies a possibility of a workflow that
 we’re going to present now:
 
 ### Possible workflow
@@ -186,20 +197,29 @@ we’re going to present now:
 
 - Create a repository for your project, add it to OPAM with `opam add
   dev <uri>`, `<uri>` being an *http* or *git* url, or a filesystem’s
-  path. Packages from this repository will have the priority over the
-  ones from the default OPAM repository.
+  path.
 
 - Add specific packages to your remote repository, don’t forget to do
   an `opam update` after each modification of it.
 
 This workflow is inspired by the one used by Mirage, and helps us
-solve our points 4 and 5. To use development packages as well as
-private code, simply make packages for them in your development
-repository. You will most likely use the standard packages as a
-template for the development packages, and modify them to use the
-development version instead of a released version. To use private
-code, you have to create a package out of it and add this package to
-your private repository.
+solve our points 4 and 5.
+
+To use development packages as well as private code, simply make
+packages for them in your development repository. You will most likely
+use the standard packages as a template for the development packages,
+and modify them to use the development version instead of a released
+version.
+
+OPAM supports **git packages**, that is, it is able to use a git
+repository as a source for a package. You will find how to achieve
+that in the relevant section of the
+[packaging](http://opam.ocamlpro.com/doc/Packaging.html) page of the
+OPAM website, as well as another method if you use *Github* to host
+your project. Support for other VCS might be added in the future.
+
+Similarly, to use private code, you have to create a package out of it
+and add this package to your private repository.
 
 If you use development packages, you can either change their names,
 for example naming them `foo-git` for the development version of

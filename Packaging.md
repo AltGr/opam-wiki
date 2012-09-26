@@ -23,9 +23,9 @@ widely used OCaml library to create unit tests for OCaml projects, and
 is a perfect example of a minimalistic yet complete package.
 
 By reading about *ounit* on the [upstream website](http://ounit.forge.ocamlcore.org),
-you learn that it is a library to create unit tests, that its latest version 
+you learn that it is a library to create unit tests, that its latest version
 is *1.1.2*, and that it depends on *[ocamlfind](http://projects.camlcity.org/projects/findlib.html/)*.
-You know the URL you can download its source tarball, and you must compute the *md5sum* of 
+You know the URL you can download its source tarball, and you must compute the *md5sum* of
 this source tarball by running `md5sum ounit-1.1.2.tar.gz` (or, on some operating systems, `md5` instead of `md5sum`).
 
 You also learn that to build and install it, you have to:
@@ -130,8 +130,9 @@ This section will be as comprehensive as possible on the art of
 creating OPAM packages, but in case of ambiguities, the ABNF syntax
 documentation has priority.
 
-Since everything has already be said about the `descr` and `url` files,
-this section only involves the `opam` files.
+Since everything has already be said about the `descr` file and almost
+everything about the `url` file, this section is mostly about the
+`opam` files.
 
 ## OPAM variables
 
@@ -258,6 +259,40 @@ constraint, you can add a field `ocaml-version: [ <
 "4.00.0" ]` to the `opam` file. This particular constraint implies
 that the package cannot be built or installed under OCaml 4.00.0 or
 later.
+
+## Git packages
+
+It is possible to use a git repository instead of an archive file in
+`url` files. To do so, you need to use the following syntax:
+
+```
+git: "<url>"
+```
+
+`<url>` being any url that git knows how to clone. For git packages,
+OPAM has the following behaviour:
+
+- When installing a git package, OPAM will use git to clone its url
+  and use it as the package source
+
+- When updating packages, OPAM will do a `git fetch` in order to have
+  the last patches available for git packages
+
+- When upgrading packages, OPAM will merge the last changes before
+  rebuilding and upgrading the packages
+
+If you host your project on *Github*, you may not use git packages but
+instead use github’s functionality to create a tarball from a git
+repository. Is is generally available at
+`https://github.com/<your-id>/<your-project>/tarball/<branch-or-tag>`. You
+can use this url to create “normal” — non-git packages from git
+repositories hosted on github.
+
+Note that git packages will normally never be included in the default
+OPAM repository, and are mainly an aid for developers who use OPAM in
+their development process. If you plan to do that, please have a look
+at the [Developing with OPAM
+tutorial](http://opam.ocamlpro.com/doc/Developing.html).
 
 ## Where to go from here
 
