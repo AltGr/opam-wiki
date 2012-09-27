@@ -62,9 +62,9 @@ repository is generally more unstable than the other. If you know
 debian, think about its stable *vs* unstable repositories. To do that:
 
 ```
-$ opam remote -rm default
-$ opam remote -add unstable git://github.com/OCamlPro/opam-repository.git
-$ opam update
+opam remote -rm default
+opam remote -add unstable git://github.com/OCamlPro/opam-repository.git
+opam update
 ```
 
 This is **not the recommended** method however, as it is not likely to
@@ -76,10 +76,10 @@ This will give you maximal control over the repository OPAM is
 using. Just do a:
 
 ```
-$ git clone git://github.com/OCamlPro/opam-repository.git
-$ opam remote -rm default
-$ opam remote -add local /path/to/opam-repository
-$ opam update
+git clone git://github.com/OCamlPro/opam-repository.git
+opam remote -rm default
+opam remote -add local /path/to/opam-repository
+opam update
 ```
 
 Now you can hack into OPAM’s packages at will, add your own ones, etc. The
@@ -113,7 +113,7 @@ just copy the directory of the corresponding package and hack it to
 adapt to the version you need. You can then do:
 
 ```
-$ opam pin <package> <version>
+opam pin <package> <version>
 ```
 
 to make OPAM use this specific version of the library and prevent
@@ -121,7 +121,7 @@ OPAM to upgrade it with the other OPAM packages on `opam upgrade`s. If
 you need a modified version of an OPAM library, you should use:
 
 ```
-$ opam pin <path>
+opam pin <path>
 ```
 
 to instruct OPAM to use a given path (in the filesystem’s sense) to
@@ -144,7 +144,7 @@ more than one such project. You can create such instances by using the
 `opam switch` command, here is how:
 
 ```
-$ opam switch -install 4.00.0-myproject -alias-of 4.00.0
+opam switch -install 4.00.0-myproject -alias-of 4.00.0
 ```
 
 This will make OPAM install a new OCaml 4.00.0 for your project under
@@ -156,8 +156,8 @@ since it needs to download and install OCaml 4.00.0 for you. To switch
 back and forth between your compiler instances, do:
 
 ```
-$ opam list
-$ opam switch <alias>
+opam list
+opam switch <alias>
 ```
 
 The first command will list the available instances you can switch to,
