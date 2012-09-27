@@ -302,3 +302,39 @@ above. If you find yourself stuck trying to package a software or a
 library, please read the OPAM [specification](https://github.com/OCamlPro/opam/blob/master/doc/specs/roadmap.pdf) (you will find it in the
 `doc` directory in the OPAM tarball) and/or read existing OPAM
 package descriptions for inspiration.
+
+# Including packages to the official OPAM repository
+
+This section will help you getting started with the process of
+submitting packages to the official OPAM repository. This repository
+is available at url `http://opam.ocamlpro.com`, but its content is
+generated from a [git
+repository](https://github.com/OCamlPro/opam-repository) hosted on
+*github*.
+
+To submit a package for inclusion in the official repository, all you
+have to do is to fork `opam-repository` on github, commit a patch
+containing the package(s) you want to include, and open a pull request
+for it.
+
+If the above sentence makes no sense for you, you probably don’t know
+about either *git* or *github* (or both). *git* is a distributed
+version control system, very popular at the time we write those
+lines. Getting started with git is definitely a topic outside the
+scope of this short tutorial, but you can read about it on git’s
+[documentation](http://git-scm.com/documentation) page.
+
+Github is a web frontend to git. It allows users to store public git
+repositories, and provides additional convenient features over git
+such as “[pull
+requests](https://help.github.com/articles/using-pull-requests)” that
+automatise the process of sharing patches with others. You can learn
+how to use it [here](https://help.github.com/).
+
+If you cannot (or do not want to) use github but still want to
+contribute to packages, you can try sending a mail to
+`contact@ocamlpro.com` with your patches to `opam-repository`. As this
+method requires manual intervention from our not very big OPAM team,
+it should only be used if the first method is not an option for
+you. It might as well take more time for your request to be processed
+in this case.
