@@ -61,7 +61,7 @@ available. Here is a list of supported distributions:
 
 ### Obtaining OPAM
 
-Download OPAM 0.6.0 at <https://github.com/OCamlPro/opam/tarball/0.6.0>
+Download OPAM 0.7.2 at <https://github.com/OCamlPro/opam/tarball/0.7.2>
 
 If you want to try the development (unstable) version of OPAM, clone
  the git repository: `git clone
