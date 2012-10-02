@@ -5,7 +5,7 @@ Here is the simplest and shortest way of getting started with OPAM:
 *Warning: This method only works with a Linux 64bits architecture.* If your
 platform is of a different kind or if using a pre-compiled binary isn't to your
 taste, you can find other bootstrapping methods in the
-[Tutorial](Tutorial.html).
+[Tutorial](Tutorial.html#h1-Gettingstarted).
 
 - Download a pre-compiled OPAM binary :
 [opam64](http://opam.ocamlpro.com/build/opam64), or do it directly from the
