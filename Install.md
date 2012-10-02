@@ -1,6 +1,11 @@
 # Install OPAM in 2 minutes
 
-Here is the simplest and shortest way of getting started with OPAM :
+Here is the simplest and shortest way of getting started with OPAM:
+
+*Warning: This method only works with a Linux 64bits architecture.* If your
+platform is of a different kind or if using a pre-compiled binary isn't to your
+taste, you can find other bootstrapping methods in the
+[Tutorial](Tutorial.html).
 
 - Download a pre-compiled OPAM binary :
 [opam64](http://opam.ocamlpro.com/build/opam64), or do it directly from the
@@ -10,7 +15,7 @@ shell with `wget` :
 wget http://opam.ocamlpro.com/build/opam64      # Get a pre-compiled OPAM binary
 ```
 
-- Initialize and install OPAM :
+- Initialize and install OPAM:
 
 ```
 chmod +x opam64                                 # Make it executable
@@ -30,7 +35,3 @@ your `~/.profile` or `~/.bashrc`.
 
 For further help and to learn how to use OPAM, you can either type
 `opam --help` or move on to the [Tutorial](Tutorial.html).
-
-*Note*: If using a binary to get started doesn't work for you or isn't to your
-taste, you can find other bootstrapping methods in the
-[Tutorial](Tutorial.html).
