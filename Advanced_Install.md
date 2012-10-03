@@ -30,7 +30,7 @@ available. Here is a list of supported distributions:
 
 ### Obtaining OPAM
 
-Download OPAM 0.7.4 at <https://github.com/OCamlPro/opam/tarball/0.7.4>
+Download OPAM 0.7 at <https://github.com/OCamlPro/opam/tarball/0.7.5>
 
 If you want to try the development (unstable) version of OPAM, clone
  the git repository: `git clone
