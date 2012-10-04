@@ -24,7 +24,7 @@ is a perfect example of a minimalistic yet complete package.
 
 By reading about *ounit* on the [upstream website](http://ounit.forge.ocamlcore.org),
 you learn that it is a library to create unit tests, that its latest version
-is *1.1.2*, and that it depends on *[ocamlfind](http://projects.camlcity.org/projects/findlib.html/)*.
+is *1.1.2*, and that it depends on [ocamlfind](http://projects.camlcity.org/projects/findlib.html/).
 You know the URL you can download its source tarball, and you must compute the *md5sum* of
 this source tarball by running `md5sum ounit-1.1.2.tar.gz` (or, on some operating systems, `md5` instead of `md5sum`).
 
