@@ -152,14 +152,17 @@ copy of OCaml 4.00.0 under the name *foo*. Note that the state of
 compiler *4.00.0* will not be replicated in *foo*. *foo* is brand new
 with no packages installed.
 
-### Ability to *clone* a compiler into another one
+### Ability to *export* a compiler universe into another one
 
 This means “replicate the state (installed packages, etc.) from one
 compiler to another one”. It is useful if you want to have the ability
 to fork a given compiler. The syntax is
 
 ```
-opam switch -clone <version>
+opam switch 4.00.0
+opam switch -export universe_for_4.00.0
+opam switch 4.00.1
+opam switch -import universe_for_4.00.0
 ```
 
 This will install all packages installed in the compiler `<version>`
