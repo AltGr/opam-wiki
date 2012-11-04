@@ -19,13 +19,10 @@ wget http://opam.ocamlpro.com/build/opam64      # Get a pre-compiled OPAM binary
 
 ```
 chmod +x opam64                                 # Make it executable
-./opam64 init                                   # Initialize OPAM database locally (fresh ~/.opam)
-./opam64 install opam                           # Install your own version of OPAM
+sudo cp opam64 /usr/local/bin/opam              # Copy the binary in your path
+opam init                                       # Initialize OPAM database locally (fresh ~/.opam)
 eval `opam config -env`                         # Update the local environment to use OPAM
 ```
-
-- You can then delete the pre-compiled binary and use the `opam` command with
-your current user account.
 
 - If you'd like the environment to be set properly to use OPAM each time you
 start a new shell session, just add the `eval \`opam config -env\`` command to
