@@ -61,7 +61,15 @@ dependencies without compiling the project, run `make clone`.
 If you don't have *curl* installed on your system, you can run `make
 FETCH=wget clone` before `make`.
 
-On *BSD systems, use `gmake` instead of `make`.
+####
+
+On *BSD systems, you need to use `gmake` instead of `make`. Moreover, the
+default path for installing the manual pages needs to be changed:
+
+```
+./configure --mandir /usr/local/man
+gmake
+```
 
 ### Installing OPAM
 
