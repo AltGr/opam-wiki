@@ -62,9 +62,7 @@ repository is generally more unstable than the other. If you know
 debian, think about its stable *vs* unstable repositories. To do that:
 
 ```
-opam remote -rm default
 opam remote -add unstable git://github.com/OCamlPro/opam-repository.git
-opam update
 ```
 
 This is **not the recommended** method however, as it is not likely to
@@ -77,9 +75,7 @@ using. Just do a:
 
 ```
 git clone git://github.com/OCamlPro/opam-repository.git
-opam remote -rm default
 opam remote -add local /path/to/opam-repository
-opam update
 ```
 
 Now you can hack into OPAM’s packages at will, add your own ones, etc. The
