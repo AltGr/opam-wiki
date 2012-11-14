@@ -191,7 +191,7 @@ we’re going to present now:
 - Use the default OPAM repository as a base, i.e. you started by `opam
   init`.
 
-- Create a repository for your project, add it to OPAM with `opam add
+- Create a repository for your project, add it to OPAM with `opam remote -add
   dev <uri>`, `<uri>` being an *http* or *git* url, or a filesystem’s
   path.
 
