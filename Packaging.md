@@ -260,6 +260,10 @@ constraint, you can add a field `ocaml-version: [ <
 that the package cannot be built or installed under OCaml 4.00.0 or
 later.
 
+## Patching sources
+
+You can instruct OPAM to apply patches to the source code before building a package. To do so, you have to add a *patches* field to the opam file, the syntax being of the form `patches: ["bugfix1.patch" "bugfix2.patch"]`, where *bugfix1.patch* and *bugfix2.patch* are two files existing in the directory `files`. Before building such a package, OPAM will substitute any opam variable (of the form `%{variable}%`) to their respective values and apply the resulting patches to the source code. Only then will the package be built. For more information, please look at packages including patches, such as `dbm.1.0`.
+
 ## Git packages
 
 It is possible to use a git repository instead of an archive file in
