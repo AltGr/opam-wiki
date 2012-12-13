@@ -16,7 +16,7 @@ you can obviously install the libraries using OPAM. That’s the normal,
 ordinary thing that OPAM do for you anyway, so we can say there is
 nothing special here.
 
-## Yes, but…
+## Bigger project
 
 There are some cases where your project is simple, but still the
 scenario diverge from what has been presented above. Various things
@@ -62,7 +62,7 @@ repository is generally more unstable than the other. If you know
 debian, think about its stable *vs* unstable repositories. To do that:
 
 ```
-opam remote -add unstable git://github.com/OCamlPro/opam-repository.git
+opam remote add unstable git://github.com/OCamlPro/opam-repository.git
 ```
 
 This is **not the recommended** method however, as it is not likely to
@@ -75,7 +75,7 @@ using. Just do a:
 
 ```
 git clone git://github.com/OCamlPro/opam-repository.git
-opam remote -add local /path/to/opam-repository
+opam remote add local /path/to/opam-repository
 ```
 
 Now you can hack into OPAM’s packages at will, add your own ones, etc. The
@@ -140,7 +140,7 @@ more than one such project. You can create such instances by using the
 `opam switch` command, here is how:
 
 ```
-opam switch -install 4.00.0-myproject -alias-of 4.00.0
+opam switch install 4.00.0-myproject -alias-of 4.00.0
 ```
 
 This will make OPAM install a new OCaml 4.00.0 for your project under

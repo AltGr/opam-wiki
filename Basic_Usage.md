@@ -1,8 +1,8 @@
-# Learn to use OPAM in 2 minutes
+# Learn to use OPAM in 2 minutes
 
 This short tutorial covers the very basic use cases to get you started with
 OPAM. A more lengthy introduction can be found in the
-[Advanced Usage](Advanced_Usage.html) guide.
+[Advanced Usage](Advanced_Usage.html) guide.
 
 ## Browsing available packages
 
@@ -40,4 +40,4 @@ opam upgrade            # Re-install packages that were updated since last upgra
 
 To learn how to use more advanced features of OPAM (version pinning, multiple
 repositories, multiple compilers...), move on to the
-[Advanced Usage](Advanced_Usage.html) guide.
+[Advanced Usage](Advanced_Usage.html) guide.

@@ -110,7 +110,7 @@ This functionality is driven by the `opam switch` command. Using `opam
 switch --help` will give you the full documentation. What follows is a
 short primer for the most useful features.
 
-* `opam switch -list` will display a list of the available
+* `opam switch list` will display a list of the available
   compilers. The first section is a list of installed compilers on
   this computer. It contains at least *system*, which is not a
   compiler installed by opam but the compiler that was used to compile
@@ -122,11 +122,11 @@ short primer for the most useful features.
   switch* therefore takes the time it needs for your system to compile
   OCaml 4.00.0.
 
-* `opam switch -remove <version>` will just delete an opam-installed
+* `opam switch remove <version>` will just delete an opam-installed
   compiler from your system, thus freeing some disk space.
 
 After switching to another compiler, opam will ask you to update your
-environment by running ``eval `opam config -env` ``. Indeed, compiler
+environment by running ``eval `opam config env` ``. Indeed, compiler
 switching rely on environment variables so that your shell can find
 the libraries and binaries corresponding to the compiler you
 selected. Please don’t forget to run this command!
@@ -144,7 +144,7 @@ packages and are afraid to break your clean opam installation, you can
 just use this feature as well. The sytax is
 
 ```
-opam switch -install <alias> -alias-of <version>
+opam switch install <alias> --alias-of <version>
 ```
 
 For example do `opam switch -install foo -alias-of 4.00.0` will make a
@@ -160,9 +160,9 @@ to fork a given compiler. The syntax is
 
 ```
 opam switch 4.00.0
-opam switch -export universe_for_4.00.0
+opam switch export universe_for_4.00.0
 opam switch 4.00.1
-opam switch -import universe_for_4.00.0
+opam switch import universe_for_4.00.0
 ```
 
 This will install all packages installed in the compiler `<version>`
@@ -234,7 +234,7 @@ packages are stored in a git repository, do:
 
 ```
 opam init # Use the default repository
-opam remote -add devel git://devel.git
+opam remote add devel git://devel.git
 ```
 
 OPAM will add the default OPAM repository when initializing, and you

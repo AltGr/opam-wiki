@@ -89,7 +89,7 @@ Before using OPAM, you need to initialize its state. Start by doing:
 
 ```
 opam init
-eval `opam config -env`
+eval `opam config env`
 ```
 
 This will:
@@ -101,7 +101,7 @@ This will:
 
 * Update your local environment to be able to use OPAM packages and compilers.
 
-It is recommanded that you add ``eval `opam config -env` `` in the
+It is recommanded that you add ``eval `opam config env` `` in the
 configuration file of your shell (most likely `~/.bashrc` or
 `~/.profile`).
 

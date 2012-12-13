@@ -7,7 +7,7 @@ Basic instructions for getting up and running with opam:
 
 You'll also need to prepare your environment for using opam, which can be done by running.
 
-    $ eval `opam config -env`
+    $ eval `opam config env`
 
 In order to use ocaml and topfind:
 
