@@ -120,9 +120,10 @@ source package has no fixed version (the typical example being a
 source package hosted on *github* with no tags). This checksum will be
 checked when creating and installing the package.
 
-The URL can also contain a single `git` field instead of `archive`, which
-points to GIT repository URL.  This will be checked out and updated every
-time `opam update` is run, which is useful for development packages.
+The URL can also contain a single `git` or `darcs` field instead of `archive`,
+which points to GIT or DARCS repository URL.  This will be checked out and
+updated every time `opam update` is run, which is useful for development
+packages.
 
 # Advanced OPAM packaging guide
 
@@ -264,7 +265,7 @@ later.
 
 You can instruct OPAM to apply patches to the source code before building a package. To do so, you have to add a *patches* field to the opam file, the syntax being of the form `patches: ["bugfix1.patch" "bugfix2.patch"]`, where *bugfix1.patch* and *bugfix2.patch* are two files existing in the directory `files`. Before building such a package, OPAM will substitute any opam variable (of the form `%{variable}%`) to their respective values and apply the resulting patches to the source code. Only then will the package be built. For more information, please look at packages including patches, such as `dbm.1.0`.
 
-## Git packages
+## Git / Darcs packages
 
 It is possible to use a git repository instead of an archive file in
 `url` files. To do so, you need to use the following syntax:
@@ -297,6 +298,16 @@ OPAM repository, and are mainly an aid for developers who use OPAM in
 their development process. If you plan to do that, please have a look
 at the [Developing with OPAM
 tutorial](http://opam.ocamlpro.com/doc/Developing.html).
+
+### Darcs packages
+
+[Darcs](http://darcs.net/) repositories are supported as well. OPAM behaves the
+same way it does with git repositories, as described above. You just need to
+specify the repository url using the following syntax in `url` files:
+
+```
+darcs: "<url>"
+```
 
 ## Where to go from here
 

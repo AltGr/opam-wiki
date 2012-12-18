@@ -207,12 +207,12 @@ use the standard packages as a template for the development packages,
 and modify them to use the development version instead of a released
 version.
 
-OPAM supports **git packages**, that is, it is able to use a git
-repository as a source for a package. You will find how to achieve
-that in the relevant section of the
-[packaging](http://opam.ocamlpro.com/doc/Packaging.html) page of the
-OPAM website, as well as another method if you use *Github* to host
-your project. Support for other VCS might be added in the future.
+OPAM supports **git and darcs packages**, that is, it is able to use a git or
+darcs repository as a source for a package. You will find how to achieve that
+in the relevant section of the
+[packaging](http://opam.ocamlpro.com/doc/Packaging.html) page of the OPAM
+website, as well as another method if you use *Github* to host your project.
+Support for other VCS might be added in the future.
 
 Similarly, to use private code, you have to create a package out of it
 and add this package to your private repository.
