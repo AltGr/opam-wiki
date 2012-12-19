@@ -41,20 +41,20 @@ A minimum OPAM package is a directory containing three files: `descr`, `opam`, a
 The name of the directory defines the package name and version: `<package-name>.<package-version>`.
 In our case, the directory will be `ounit.1.1.2` and contain the following files:
 
-- `descr`
+- `packages/<package-name>.<package-version>/descr`
 
 ```
 Unit testing framework inspired by the JUnit tool and the HUnit tool
 ```
 
-- `opam`
+- `packages/<package-name>.<package-version>/opam`
 
 ```
 opam-version: "1"
 maintainer: "contact@ocamlpro.com"
 build: [
-  ["make" "build"]
-  ["make" "install"]
+  [make "build"]
+  [make "install"]
 ]
 remove: [
   ["ocamlfind" "remove" "oUnit"]
@@ -62,7 +62,7 @@ remove: [
 depends: ["ocamlfind"]
 ```
 
-- `url`
+- `packages/<package-name>.<package-version>/url`
 
 ```
 archive: "http://forge.ocamlcore.org/frs/download.php/886/ounit-1.1.2.tar.gz"
@@ -97,14 +97,16 @@ gets translated into
 
 ```
 build: [
-  ["make" "build"]
-  ["make" "install"]
+  [make "build"]
+  [make "install"]
 ]
 ```
 
 You should adapt this to the required commands to build your package,
 and each line contains the shell commands corresponding to a
-`string list`.
+`string list`. Note that `make` is a special variable which will be
+automatically translated to either `make` on linux and OSX or `gmake'
+on BSD systems.
 
 The `remove` field follows the same syntax as the `build` field. The
 `depends` field is a `string list` of dependencies, with each dependency
@@ -124,6 +126,68 @@ The URL can also contain a single `git` or `darcs` field instead of `archive`,
 which points to GIT or DARCS repository URL.  This will be checked out and
 updated every time `opam update` is run, which is useful for development
 packages.
+
+# Testing custom OPAM packages
+
+The easiest way to test your new packages is to set-up a local
+repository for testing purposes.
+
+```
+$ mkdir -k /tmp/testing
+$ opam repo add testing /tmp/testing
+```
+
+These commands add a new (currently empty) repository named
+`testing` (you can pick an other name if your prefer) which will
+contain what is in `/tmp/testing` (*Remark*: you can also clone the
+official git repository if you don't want to start from a fresh one,
+this will work as well).
+
+You can now check that this new repository exists:
+
+$ opam repo  # eq. to 'opam repo list'
+
+This command displays the list of repositories, with `testing`
+having the highest priority (you can use `opam repo priority` to
+change the relative repository priorities later).
+
+Now it is time to populate `/tmp/testing/packages` with your new package
+files. For instance, if you want to test the version `1.1.3` of `ounit`,
+you have to create `/tmp/packages/ounit.1.1.3/{opam,descr,url}`
+following the guidelines defined above.
+
+To take this changes into account, update your testing repository:
+
+```
+$ opam update testing
+```
+
+If everything is fine, OPAM should tell you than a new version of `ounit` is
+available. If this is the case, you can install it by doing:
+
+```
+$ opam install ounit.1.1.3
+```
+
+*Remark*: you can use `opam-mk-repo` to simulate the creation of OPAM
+package archives done on `opam.ocamlpro.com`:
+
+```
+$ cd /tmp/testing && opam-mk-repo -g ounit
+```
+
+This command will:
+* download the upstream archive, and generate the correct checksum
+  (because of `-g);
+* create the archive `archives/ounit.1.1.3+opam.tar.gz` containing
+  the content of the upstream archive + the files in
+  `packages/ounit.1.1.3/files/`.
+
+If `archives/ounit.1.1.3+opam.tar.gz` exists, OPAM will use it
+directly instead of downloading the archive upstream.
+
+If (i) the basic installation and (ii) the archive creation work, you
+are in good shape to submit your new package upstream (see below).
 
 # Advanced OPAM packaging guide
 
@@ -146,16 +210,18 @@ use the variable `bin`:
 
 ```
 build: [
-  ["./configure" "-bindir" "%{bin}%"]
-  ["make" "all"]
-  ["make" "opt"]
-  ["make" "install"]
+  ["./configure" "--bindir" bin]
+  [make "all"]
+  [make "opt"]
+  [make "install"]
 ]
 
 ```
 
-In this case, `%{bin}%` will be substituted by the value of the `bin`
-variable.
+In this case, `bin` will be substituted by the value of the `bin`
+variable. In case you need to substitue a substring, you can use
+`"--bindir=%{bin}%"`: here `%{bin}%` will be substituted by the
+value of `bin`.
 
 ## Optional dependencies
 
@@ -173,8 +239,8 @@ opam-version: "1"
 maintainer: "contact@ocamlpro.com"
 build: [
   ["./configure" "--%{conf-libev:enable}%-libev" "--%{react:enable}%-react" "--%{ssl:enable}%-ssl" "--%{base-unix:enable}%-unix" "--%{base-unix:enable}%-extra" "--%{base-threads:enable}%-preemptive"]
-  ["make" "build"]
-  ["make" "install"]
+  [make "build"]
+  [make "install"]
 ]
 remove: [
   ["ocamlfind" "remove" "lwt"]
@@ -322,10 +388,10 @@ package descriptions for inspiration.
 
 This section will help you getting started with the process of
 submitting packages to the official OPAM repository. This repository
-is available at url `http://opam.ocamlpro.com`, but its content is
+is available at url [http://opam.ocamlpro.com], but its content is
 generated from a [git
 repository](https://github.com/OCamlPro/opam-repository) hosted on
-*github*.
+[github](https://github.com/).
 
 To submit a package for inclusion in the official repository, all you
 have to do is to fork `opam-repository` on github, commit a patch
