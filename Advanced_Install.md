@@ -17,7 +17,9 @@ available. Here is a list of supported distributions:
 * Archlinux: [opam](http://aur.archlinux.org/packages.php?ID=62127),
   [opam-git](http://aur.archlinux.org/packages.php?ID=62387)
 
-* Mac OS X: `opam` via [homebrew](http://mxcl.github.com/homebrew/)
+* Mac OS X:
+  * `opam` via [homebrew](http://mxcl.github.com/homebrew/)
+  * `opam` via [MacPorts](http://www.macports.org/)
 
 ## Installing OPAM from source
 
