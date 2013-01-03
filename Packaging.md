@@ -204,7 +204,7 @@ everything about the `url` file, this section is mostly about the
 OPAM maintains a set of variables (key value pairs) that can be used
 in `opam` files and that will be substituted by their values on
 package creation. The list of variables that can be used in `opam`
-files can be displayed by doing `opam config --list-vars`. The
+files can be displayed by doing `opam config list`. The
 following example shows the `build` section of package *ocamlnet* that
 use the variable `bin`:
 
@@ -292,7 +292,7 @@ the package *xmlm* has this following `opam` file:
 opam-version: "1"
 maintainer: "contact@ocamlpro.com"
 build: [
-  ["ocaml" "setup.ml" "-configure" "--prefix" "%{prefix}%"]
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
