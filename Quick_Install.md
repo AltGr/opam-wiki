@@ -21,7 +21,14 @@ wget http://opam.ocamlpro.com/build/opam64      # Get a pre-compiled OPAM binary
 chmod +x opam64                                 # Make it executable
 sudo cp opam64 /usr/local/bin/opam              # Copy the binary in your path
 opam init                                       # Initialize OPAM database locally (fresh ~/.opam)
-eval `opam config env`                         # Update the local environment to use OPAM
+eval `opam config env`                          # Update the local environment to use OPAM
+```
+
+- If you don't have OCaml installed on your system, you can initialize OPAM with
+a given compiler version:
+
+```
+opam init --comp 4.00.1                        # Initialize OPAM with OCaml 4.00.1
 ```
 
 - If you'd like the environment to be set properly to use OPAM each time you

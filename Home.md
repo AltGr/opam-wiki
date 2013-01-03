@@ -1,16 +1,13 @@
-Basic instructions for getting up and running with opam:
+## Install
 
-    <install latest opam from github.com/OCamlPro/opam>
-    $ rm -rf ~/.opam
-    $ opam init
-    $ opam install <package-of-your-choice>
+* [Binary Installation](Quick_Install)
+* [Other Installations](Advanced_Install)
 
-You'll also need to prepare your environment for using opam, which can be done by running.
+## Use
 
-    $ eval `opam config env`
+* [Basic Usage](Basic_Usage)
+* [Advanced Usage](Advanced_Usage)
 
-In order to use ocaml and topfind:
+## Packaging
 
-    $ opam install ocamlfind
-    $ ocaml -I $OCAML_TOPLEVEL_PATH
-    > #use "topfind"
+* [Instruction to Packagers](Packaging)
