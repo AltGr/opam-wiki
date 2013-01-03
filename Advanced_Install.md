@@ -107,5 +107,20 @@ It is recommanded that you add ``eval `opam config env` `` in the
 configuration file of your shell (most likely `~/.bashrc` or
 `~/.profile`).
 
-To learn more about these two commands, try `opam --help init` and
-`opam --help config`.
+To learn more about these two commands, try `opam init --init` and
+`opam config --help`.
+
+### Uninstalling OPAM
+
+To uninstall OPAM, simply run:
+
+```
+$ make uninstall
+```
+
+at the root of the sources. Or you can simply remove OPAM binaries, manual pages and state:
+
+```
+$ rm -rf $(dirname $(opam config var prefix))
+$ rm -f $(which opam) $(which opam-mk-repo)
+```
