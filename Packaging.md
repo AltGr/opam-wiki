@@ -322,7 +322,7 @@ lib: [ "META" "lib/foo.cmi" "lib/foo.cmo" "lib/foo.cmx" ]
 
 
 For comprehensive information about this facility refer to the Section 1.2.5 of OPAM
-[developper manual](https://github.com/OCamlPro/opam/blob/master/doc/dev-manual/dev-manual.pdf).
+[developer manual](https://github.com/OCamlPro/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true)
 
 ## Compiler version constraints
 
