@@ -204,7 +204,7 @@ everything about the `url` file, this section is mostly about the
 OPAM maintains a set of variables (key value pairs) that can be used
 in `opam` files and that will be substituted by their values on
 package creation. The list of variables that can be used in `opam`
-files can be displayed by doing `opam config -list-vars`. The
+files can be displayed by doing `opam config --list-vars`. The
 following example shows the `build` section of package *ocamlnet* that
 use the variable `bin`:
 
@@ -305,18 +305,24 @@ depends: ["ocamlfind"]
 and has additional file `files/xmlm.install`:
 
 ```
-lib: []
 bin: ["_build/test/xmltrip.native" {"xmltrip"}]
-toplevel: []
-misc: []
 ```
 
 This has the semantic: “install the file of path
 `_build/test/xmltrip.native` relative to the root of the source
-package into the directory returned by the command `opam config -var
-bin` under the name `xmltrip`”. You can install additional libraries
-and toplevels the same way. For comprehensive information about this
-facility refer to the OPAM [specification](https://github.com/OCamlPro/opam/blob/master/doc/specs/roadmap.pdf).
+package into the directory returned by the command `opam config var
+bin` under the name `xmltrip`”. If the source filename starts by `?`,
+the installation will not fail if the file is not present.
+
+You can install additional libraries and toplevels the same way. For instance:
+
+```
+lib: [ "META" "lib/foo.cmi" "lib/foo.cmo" "lib/foo.cmx" ]
+```
+
+
+For comprehensive information about this facility refer to the Section 1.2.5 of OPAM
+[developper manual](https://github.com/OCamlPro/opam/blob/master/doc/dev-manual/dev-manual.pdf).
 
 ## Compiler version constraints
 
