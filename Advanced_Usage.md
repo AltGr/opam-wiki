@@ -160,9 +160,9 @@ to fork a given compiler. The syntax is
 
 ```
 opam switch 4.00.0
-opam switch export universe_for_4.00.0
+opam switch export -f universe_for_4.00.0
 opam switch 4.00.1
-opam switch import universe_for_4.00.0
+opam switch import -f universe_for_4.00.0
 ```
 
 This will install all packages installed in the compiler `<version>`
