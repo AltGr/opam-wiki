@@ -83,7 +83,9 @@ description starting from the second line.
 ### `opam`
 
 The full ABNF specification of the syntax for *opam* files is
-available in OPAM’s [developer manual](https://github.com/OCamlPro/opam/blob/master/doc/dev-manual/dev-manual.pdf). In this file,
+available in OPAM
+[developer manual](https://github.com/OCamlPro/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true).
+In this file,
 `opam-version` MUST be `1`, and you should put your email in the
 `maintainer` field. `build` has OCaml type `string list list`, and
 contains the build instructions. Here,
@@ -386,7 +388,9 @@ darcs: "<url>"
 Although this tutorial covered most packaging cases, there are still
 packages that requires more tuning that what have been described
 above. If you find yourself stuck trying to package a software or a
-library, please read the OPAM [developer manual](https://github.com/OCamlPro/opam/blob/master/doc/dev-manual/dev-manual.pdf) (you will find it in the
+library, please read the OPAM
+[developer manual](https://github.com/OCamlPro/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true)
+(you will find it in the
 `doc` directory in the OPAM tarball) and/or read existing OPAM
 package descriptions for inspiration.
 
