@@ -21,6 +21,8 @@ available. Here is a list of supported distributions:
   * `opam` via [homebrew](http://mxcl.github.com/homebrew/)
   * `opam` via [MacPorts](http://www.macports.org/)
 
+* Debian / Ubuntu packages will be available shortly.
+
 ## Installing OPAM from source
 
 ### Prerequisites:
@@ -32,7 +34,7 @@ available. Here is a list of supported distributions:
 
 ### Obtaining OPAM
 
-Download OPAM 0.8 at <https://github.com/OCamlPro/opam/archive/0.8.3.tar.gz>
+Download OPAM 0.9 at <https://github.com/OCamlPro/opam/archive/0.9.1.tar.gz>
 
 If you want to try the development (unstable) version of OPAM, clone
  the git repository: `git clone
