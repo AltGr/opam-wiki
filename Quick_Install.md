@@ -7,7 +7,7 @@ platform is of a different kind or if using a pre-compiled binary isn't to your
 taste, you can find other bootstrapping methods in the
 [Advanced Install](Advanced_Install.html) guide.
 
-- Download a pre-compiled OPAM binary:
+- Download a pre-compiled OPAM binary (the current version is 0.9):
 [opam64](http://opam.ocamlpro.com/build/opam64), or do it directly from the
 shell with `wget`:
 
