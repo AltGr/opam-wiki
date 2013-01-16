@@ -15,7 +15,7 @@ simpler but restrictive boostrapping with a pre-compiled binary.
 
 ### Obtaining OPAM
 
-Download OPAM 0.9 at <https://github.com/OCamlPro/opam/archive/0.9.1.tar.gz>
+Download OPAM 0.9 at [https://github.com/OCamlPro/opam/archive/0.9.1.tar.gz].
 
 If you want to try the development (unstable) version of OPAM, clone
  the git repository: `git clone
