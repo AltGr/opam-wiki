@@ -23,7 +23,7 @@ platform is of a different kind or if using a pre-compiled binary isn't to your
 taste, you can find other bootstrapping methods in the
 [Advanced Install](Advanced_Install.html) guide.
 
-- Download a pre-compiled OPAM binary (the current version is 0.9):
+- Download a pre-compiled OPAM binary (the current version is 0.9.1):
 [opam64](http://opam.ocamlpro.com/build/opam64), or do it directly from the
 shell with `wget`:
 
@@ -58,7 +58,8 @@ For further help and to learn how to use OPAM, you can either type
 
 ## Getting OPAM from sources
 
-Sources of OPAM 0.9.1 are available at [https://github.com/OCamlPro/opam/archive/0.9.1.tar.gz]. You can then run the usual commands:
+Sources of OPAM 0.9.1 are available at [here](https://github.com/OCamlPro/opam/archive/0.9.1.tar.gz).
+Once the archive downloaded and extracted, you can then run the usual commands:
 
 ```
 ./configure && make && make install
