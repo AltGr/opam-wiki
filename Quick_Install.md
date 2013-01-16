@@ -58,7 +58,7 @@ For further help and to learn how to use OPAM, you can either type
 
 ## Getting OPAM from sources
 
-Sources of OPAM 0.9.1 are available at [here](https://github.com/OCamlPro/opam/archive/0.9.1.tar.gz).
+Sources of OPAM 0.9.1 are available [here](https://github.com/OCamlPro/opam/archive/0.9.1.tar.gz).
 Once the archive downloaded and extracted, you can then run the usual commands:
 
 ```
