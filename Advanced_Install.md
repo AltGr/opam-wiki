@@ -4,25 +4,6 @@ This tutorial is a complement to the [Quick Install](Quick_Install.html)
 tutorial and provides you alternative methods to install OPAM beyond the
 simpler but restrictive boostrapping with a pre-compiled binary.
 
-## Installing OPAM using a pre-compiled binary
-
-This is the simplest and recommended method if you're running *Linux 64bits*.
-This method is described in the [Quick Install](Quick_Install.html) tutorial.
-
-## Installing OPAM with your distribution
-
-You can use the OPAM package of your distribution if
-available. Here is a list of supported distributions:
-
-* Archlinux: [opam](http://aur.archlinux.org/packages.php?ID=62127),
-  [opam-git](http://aur.archlinux.org/packages.php?ID=62387)
-
-* Mac OS X:
-  * `opam` via [homebrew](http://mxcl.github.com/homebrew/)
-  * `opam` via [MacPorts](http://www.macports.org/)
-
-* Debian / Ubuntu packages will be available shortly.
-
 ## Installing OPAM from source
 
 ### Prerequisites:
