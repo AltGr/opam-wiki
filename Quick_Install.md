@@ -1,5 +1,7 @@
 # Install OPAM in 2 minutes
 
+## Binary installer
+
 Here is the simplest and shortest way of getting started with OPAM:
 
 *Warning: This method only works with a Linux 64bits architecture.* If your
@@ -39,3 +41,14 @@ your `~/.profile` or `~/.bashrc`.
 
 For further help and to learn how to use OPAM, you can either type
 `opam --help` or move on to the [Basic Usage](Basic_Usage.html) guide.
+
+## Getting OPAM from sources
+
+Sources of OPAM 0.9.1 are available at <https://github.com/OCamlPro/opam/archive/0.9.1.tar.gz>. You can then run the usual commands:
+
+```
+./configure && make && make install
+```
+
+See [Advanced Install](Advanced_Install.html) guide for more information.
+
