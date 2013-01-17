@@ -1,5 +1,9 @@
 # Install OPAM in 2 minutes
 
+This page describes how to install and configure OPAM.
+For further help and to learn how to use OPAM, you can either type
+`opam --help` or move on to the [Basic Usage](Basic_Usage.html) guide.
+
 ## Installing OPAM with your distribution
 
 You can use the OPAM package of your distribution if
@@ -16,45 +20,31 @@ available. Here is a list of supported distributions:
 
 ## Binary installer
 
-Here is the simplest and shortest way of getting started with OPAM:
-
-*Warning: This method only works with a Linux 64bits architecture.* If your
+*Warning: This method only works with Darwin and Linux 64bits architecture.* If your
 platform is of a different kind or if using a pre-compiled binary isn't to your
-taste, you can find other bootstrapping methods in the
-[Advanced Install](Advanced_Install.html) guide.
+taste, use an other method.
 
-- Download a pre-compiled OPAM binary (the current version is 0.9.1):
-[opam64](http://opam.ocamlpro.com/build/opam64), or do it directly from the
-shell with `wget`:
+- Download the binary auto-installed and run it:
 
 ```
-wget http://opam.ocamlpro.com/build/opam64      # Get a pre-compiled OPAM binary
+wget http://www.ocamlpro.com/pub/opam_installer.sh
+sh ./opam_installer.sh /usr/local/bin
 ```
 
-- Initialize and install OPAM:
+- This will install the latest stable opam in `/usr/local/bin`. You can change
+the path to install it in an other place.
+
+- By default, this will download and install the latest version of OCaml as well.
+You can specify which version of the OCaml you want to install:
 
 ```
-chmod +x opam64                                 # Make it executable
-sudo cp opam64 /usr/local/bin/opam              # Copy the binary in your path
-opam init                                       # Initialize OPAM database locally (fresh ~/.opam)
-eval `opam config env`                          # Update the local environment to use OPAM
-```
-
-- If you don't have OCaml installed on your system, you can initialize OPAM with
-a given compiler version:
-
-```
-opam init --comp 4.00.1                        # Initialize OPAM with OCaml 4.00.1
+sh ./opam_installer.sh /usr/local/bin 3.12.1 # Install the latest OPAM and OCaml 3.12.1
+sh ./opam_installer.sh /usr/local/bin system # Install the latest OPAM using the system OCaml
 ```
 
 - If you'd like the environment to be set properly to use OPAM each time you
 start a new shell session, just add the `eval \`opam config env\`` command to
 your `~/.profile` or `~/.bashrc`.
-
-- That's it! OPAM is installed and fully functional.
-
-For further help and to learn how to use OPAM, you can either type
-`opam --help` or move on to the [Basic Usage](Basic_Usage.html) guide.
 
 ## Getting OPAM from sources
 
