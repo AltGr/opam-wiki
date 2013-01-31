@@ -22,7 +22,7 @@ available. Here is a list of supported distributions:
 
 *Warning: This method only works with Darwin and Linux 64bits architecture.* If your
 platform is of a different kind or if using a pre-compiled binary isn't to your
-taste, use an other method.
+taste, use another method.
 
 - Download the binary auto-installed and run it:
 
@@ -57,3 +57,10 @@ Once the archive downloaded and extracted, you can then run the usual commands:
 
 See [Advanced Install](Advanced_Install.html) guide for more information.
 
+## Installing OPAM and OCaml from source using ocamlbrew
+
+[ocamlbrew](https://github.com/hcarty/ocamlbrew) is a script that can bootstrap an OCaml environment including OPAM, from source.  This option does not require an existing OCaml installation, or a pre-compiled OPAM binary for your platform.  To bootstrap a new OCaml environment including OPAM, make sure that you have the necessary pre-requisites installed to run ocamlbrew, and then run:
+
+```
+curl -kL https://raw.github.com/hcarty/ocamlbrew/master/ocamlbrew-install | env OCAMLBREW_FLAGS="-r" bash
+```
