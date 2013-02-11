@@ -140,7 +140,7 @@ more than one such project. You can create such instances by using the
 `opam switch` command, here is how:
 
 ```
-opam switch install 4.00.0-myproject -alias-of 4.00.0
+opam switch install 4.00.0-myproject --alias-of 4.00.0
 ```
 
 This will make OPAM install a new OCaml 4.00.0 for your project under
