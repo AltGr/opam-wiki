@@ -15,7 +15,7 @@ simpler but restrictive boostrapping with a pre-compiled binary.
 
 ### Obtaining OPAM
 
-Download OPAM 0.9.1 [here](https://github.com/OCamlPro/opam/archive/0.9.1.tar.gz).
+Download the latest stable version of OPAM [here](https://github.com/OCamlPro/opam/archive/latest.tar.gz).
 
 If you want to try the development (unstable) version of OPAM, clone
  the git repository: `git clone
@@ -43,10 +43,7 @@ This will fetch the necessary archives if they are not already
 downloaded and then build OPAM. If you just want to get the necessary
 dependencies without compiling the project, run `make clone`.
 
-If you don't have *curl* installed on your system, you can run `make
-FETCH=wget clone` before `make`.
-
-####
+#### BSD systems
 
 On *BSD systems, you need to use `gmake` instead of `make`. Moreover, the
 default path for installing the manual pages needs to be changed:
