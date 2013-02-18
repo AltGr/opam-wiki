@@ -58,7 +58,8 @@ your `~/.profile` or `~/.bashrc`.
 
 ## Getting OPAM from sources
 
-Sources of OPAM 0.9.1 are available [here](https://github.com/OCamlPro/opam/archive/0.9.1.tar.gz).
+Sources of the latest stable version of OPAM are available [here](https://github.com/OCamlPro/opam/archive/latest.tar.gz).
+
 Once the archive downloaded and extracted, you can then run the usual commands:
 
 ```
