@@ -87,7 +87,7 @@ It is recommanded that you add ``eval `opam config env` `` in the
 configuration file of your shell (most likely `~/.bashrc` or
 `~/.profile`).
 
-To learn more about these two commands, try `opam init --init` and
+To learn more about these two commands, try `opam init --help` and
 `opam config --help`.
 
 ### Uninstalling OPAM
