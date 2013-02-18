@@ -16,11 +16,11 @@ available. Here is a list of supported distributions:
   * `opam` via [homebrew](http://mxcl.github.com/homebrew/)
   * `opam` via [MacPorts](http://www.macports.org/)
 
-* Debian / Ubuntu packages are available. Add:
+* Debian / Ubuntu packages are available. You will need to add to your `/etc/apt/sources.list`:
   ```
   deb http://www.recoil.org/~avsm/ wheezy main
   ```
-  to your `/etc/apt/sources.list`.
+  
 
 ## Binary installer
 
