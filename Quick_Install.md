@@ -11,16 +11,22 @@ available. Here is a list of supported distributions:
 
 * Archlinux: [opam](http://aur.archlinux.org/packages.php?ID=62127),
   [opam-git](http://aur.archlinux.org/packages.php?ID=62387)
-
-* Debian / Ubuntu packages are available. You will need to add to your `/etc/apt/sources.list`:
   ```
-  deb http://www.recoil.org/~avsm/ wheezy main
+  pacman -S opam
   ```
-* OSX:
-  * `opam` via [homebrew](http://mxcl.github.com/homebrew/)
-  * `opam` via [MacPorts](http://www.macports.org/)
 
-  
+* Debian and Ubuntu packages are available.
+  ```
+  echo "deb http://www.recoil.org/~avsm/ wheezy main" >> /etc/apt/sources.list`
+  apt-get update
+  apt-get install opam
+  ```
+
+* OSX: packages for [homebrew](http://mxcl.github.com/homebrew/) and [MacPorts](http://www.macports.org/).
+  ```
+  brew install opam # using
+  port install opam # using 
+  ``` 
 
 ## Binary installer
 
