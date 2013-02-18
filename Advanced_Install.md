@@ -101,6 +101,6 @@ $ make uninstall
 at the root of the sources. Or you can simply remove OPAM binaries, manual pages and state:
 
 ```
-$ rm -rf $(dirname $(opam config var prefix))
+$ rm -rf $(opam config var root)
 $ rm -f $(which opam) $(which opam-mk-repo)
 ```
