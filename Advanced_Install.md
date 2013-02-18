@@ -1,8 +1,8 @@
 # Installing OPAM
 
 This tutorial is a complement to the [Quick Install](Quick_Install.html)
-tutorial and provides you alternative methods to install OPAM beyond the
-simpler but restrictive boostrapping with a pre-compiled binary.
+tutorial and provides complements on how to install OPAM directly from
+sources. This is *not* the recommended way of installing OPAM.
 
 ## Installing OPAM from source
 
