@@ -24,8 +24,8 @@ available. Here is a list of supported distributions:
 
 * OSX: packages for [homebrew](http://mxcl.github.com/homebrew/) and [MacPorts](http://www.macports.org/).
   ```
-  brew install opam # using
-  port install opam # using 
+  brew install opam # using Homebrew
+  port install opam # using MacPort
   ``` 
 
 ## Binary installer
