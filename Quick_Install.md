@@ -26,7 +26,7 @@ available. Here is a list of supported distributions:
 ```
   brew install opam # using Homebrew
   port install opam # using MacPort
-``` 
+```
 
 ## Binary installer
 
