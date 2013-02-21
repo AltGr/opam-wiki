@@ -12,9 +12,19 @@ available. Here is a list of supported distributions:
 * Archlinux: [opam](http://aur.archlinux.org/packages.php?ID=62127),
   [opam-git](http://aur.archlinux.org/packages.php?ID=62387)
 
+The `opam` and `opam-git` packages are available in the [AUR](https://wiki.archlinux.org/index.php/AUR). Replace `opam` with `opam-git` in the following instruction to get the development version.
+
+If you are using yaourt, then running `yaourt -S opam` just works. If not, the following commands have the same effect:
+
 ```
-  pacman -S opam
+pacman -Sy base-devel
+wget https://aur.archlinux.org/packages/op/opam/opam.tar.gz
+tar -xvf opam.tar.gz
+cd opam
+makepkg
+pacman -U opam-<version>.pkg.tar.gz
 ```
+
 
 * Debian and Ubuntu packages are available.
 
