@@ -20,7 +20,7 @@ The [opam](http://aur.archlinux.org/packages.php?ID=62127) and [opam-git](http:/
 #### Debian and Ubuntu
 
 ```
-  echo "deb [arch=amd64] http://www.recoil.org/~avsm/ wheezy main" >> /etc/apt/sources.list`
+  echo "deb [arch=amd64] http://www.recoil.org/~avsm/ wheezy main" >> /etc/apt/sources.list
   apt-get update
   apt-get install opam
 ```
