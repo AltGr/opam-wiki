@@ -36,29 +36,24 @@ OPAM packages for [homebrew](http://mxcl.github.com/homebrew/) and [MacPorts](ht
 
 ## Binary installer
 
-*Warning: This method only works with Darwin and Linux 64bits architecture.* If your
-platform is of a different kind or if using a pre-compiled binary isn't to your
+*Warning: This method only works with Darwin and Linux 64bits architecture.*
+
+If your platform is of a different kind or if using a pre-compiled binary isn't to your
 taste, use another method.
 
-- Download the binary auto-installed and run it:
+To install the latest stable opam in `/usr/local/bin` (you can change the path) and install the latest version of OCaml as well, you just need to download the binary auto-installed and run it:
 
 ```
   wget http://www.ocamlpro.com/pub/opam_installer.sh
   sh ./opam_installer.sh /usr/local/bin
 ```
 
-- This will install the latest stable opam in `/usr/local/bin`. You can change
-the path to install it in an other place.
-
-- By default, this will download and install the latest version of OCaml as well.
-You can specify which version of the OCaml you want to install:
+You can also specify which version of OCaml you want to install:
 
 ```
   sh ./opam_installer.sh /usr/local/bin 3.12.1 # Install the latest OPAM and OCaml 3.12.1
-  sh ./opam_installer.sh /usr/local/bin system # Install the latest OPAM using the system OCaml
+  sh ./opam_installer.sh /usr/local/bin system # Install the latest OPAM using the system compiler (if any)
 ```
-
-You can then run `opam init` and follow the instructions.
 
 ## From Sources
 
