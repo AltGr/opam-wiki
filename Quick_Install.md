@@ -43,8 +43,8 @@ taste, use another method.
 - Download the binary auto-installed and run it:
 
 ```
-wget http://www.ocamlpro.com/pub/opam_installer.sh
-sh ./opam_installer.sh /usr/local/bin
+  wget http://www.ocamlpro.com/pub/opam_installer.sh
+  sh ./opam_installer.sh /usr/local/bin
 ```
 
 - This will install the latest stable opam in `/usr/local/bin`. You can change
@@ -54,13 +54,11 @@ the path to install it in an other place.
 You can specify which version of the OCaml you want to install:
 
 ```
-sh ./opam_installer.sh /usr/local/bin 3.12.1 # Install the latest OPAM and OCaml 3.12.1
-sh ./opam_installer.sh /usr/local/bin system # Install the latest OPAM using the system OCaml
+  sh ./opam_installer.sh /usr/local/bin 3.12.1 # Install the latest OPAM and OCaml 3.12.1
+  sh ./opam_installer.sh /usr/local/bin system # Install the latest OPAM using the system OCaml
 ```
 
-- If you'd like the environment to be set properly to use OPAM each time you
-start a new shell session, just add the `eval \`opam config env\`` command to
-your `~/.profile` or `~/.bashrc`.
+You can then run `opam init` and follow the instructions.
 
 ## From Sources
 
