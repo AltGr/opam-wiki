@@ -2,7 +2,15 @@
 
 ***
 
-### Is there a way to tell OPAM to install from INRIA's SVN repository (either the trunk or a specific branch), and to update on demand?
+#### I have weird checksums errors, where does it come from ?
+
+First of all, you should update your repositories (`opam update`).
+
+If this doesn't work (or if you get the checksum errors while running `opam init`) this comes probably a badly configured proxy caching strategy. To clear, your proxy cache you can use `wget --no-cache <remote-file>` and then you can retry.
+
+If this doesn't work as well, you can bypass the checksum checks using `-no-checksums`.
+
+#### Is there a way to tell OPAM to install from INRIA's SVN repository (either the trunk or a specific branch), and to update on demand?
 
 `opam switch 4.01.0dev+trunk` has been added recently, which will grab the latest trunk snapshot.
 To reinstall it and refresh to a newer snapshot, just do `opam switch reinstall 4.01.0dev+trunk`, which will also attempt to recompile any packages you had in there before.
@@ -22,7 +30,7 @@ One option is to have a very high version, so that any packages with a lower bou
 
 ***
 
-### Now I want to create my first package.  I've followed the instructions from http://opam.ocamlpro.com/doc/Packaging.html but I don't know where to find opam-mk-repo (I've installed opam from the amd64 linux binary).
+#### Now I want to create my first package.  I've followed the instructions from http://opam.ocamlpro.com/doc/Packaging.html but I don't know where to find opam-mk-repo (I've installed opam from the amd64 linux binary).
 
 (that binary is hopefully just a stopgap until the OPAM binary packages become more widely available)
 
