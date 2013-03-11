@@ -2,11 +2,11 @@
 
 ***
 
-#### I have weird checksums errors, where does it come from ?
+#### I have weird checksum errors: where does they come from ?
 
 First of all, you should update your repositories (`opam update`).
 
-If this doesn't work (or if you get the checksum errors while running `opam init`) this comes probably a badly configured proxy caching strategy. To clear, your proxy cache you can use `wget --no-cache <remote-file>` and then you can retry.
+If this doesn't work (or if you get the checksum errors while running `opam init`) this comes probably a badly configured proxy cache that is serving stale files. To clear your proxy cache, you can use `wget --no-cache <remote-file>` and then you can retry.
 
 If this doesn't work as well, you can bypass the checksum checks using `-no-checksums`.
 
