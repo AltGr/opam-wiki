@@ -3,7 +3,7 @@
 ### Why OPAM ?
 
 [OCamlPro](http://www.ocamlpro.com/) has decided to start writing a brand new package manager for [OCaml](http://www.ocaml.org) in the beginning of 2012, after looking at the state of affairs in the OCaml community and not being completely satisfied with the existing solutions, especially regarding the management of dependency constraints between packages. Existing technologies such as [GODI](http://godi.camlcity.org/), [oasis](http://oasis.forge.ocamlcore.org/), [odb](http://oasis.ocamlcore.org/dev/odb/) and [ocamlbrew](https://github.com/hcarty/ocamlbrew) did contain lots of good ideas that we shamelessly stole but the final user-experience was not so great -- and we disagreed with some of the architectural choices, so it wasn't so easy to contribute to fix the existing flaws. Thus we started to discuss the specification of a new package manager with folks from [Jane Street](http://www.janestreet.com/) who decided to fund the project and from the [Mancoosi project](http://www.mancoosi.org/) to integrate state-of-the-art dependency management technologies. 
-We then hired an engineer to do the initial prototyping work -- and this effort finally gave birth to OPAM!
+After few months of hard-work, and continuous support and resources from [OCamlLabs](http://www.cl.cam.ac.uk/projects/ocamllabs/), this effort finally gave birth to the first official release of OPAM in March 2013.
 
 ### Getting Support
 
