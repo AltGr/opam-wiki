@@ -1,40 +1,14 @@
-# About OPAM
+# OPAM
 
-OPAM stands for OCaml PAckage Manager. It aims to suit to a vast
-number of users and use cases, and has unique features:
+### Why OPAM ?
 
-* Powerful handling of dependencies: versions constraints,
-  optional dependencies, conflicts, etc.
+[OCamlPro](http://www.ocamlpro.com/) has decided to start writing a brand new package manager for [OCaml](http://www.ocaml.org) in the beginning of 2012, after looking at the state of affairs in the OCaml community and not being completely satisfied with the existing solutions, especially regarding the management of dependency constraints between packages. Existing technologies such as [GODI](http://godi.camlcity.org/), [oasis](http://oasis.forge.ocamlcore.org/), [odb](http://oasis.ocamlcore.org/dev/odb/) and [ocamlbrew](https://github.com/hcarty/ocamlbrew) did contain lots of good ideas that we shamelessly stole but the final user-experience was not so great -- and we disagreed with some of the architectural choices, so it wasn't so easy to contribute to fix the existing flaws. Thus we started to discuss the specification of a new package manager with folks from [Jane Street](http://www.janestreet.com/) who decided to fund the project and from the [Mancoosi project](http://www.mancoosi.org/) to integrate state-of-the-art dependency management technologies. 
+We then hired an engineer to do the initial prototyping work -- and this effort finally gave birth to OPAM!
 
-* Multiple repositories backends: HTTP, rsync, git
+### Getting Support
 
-* Ease to create packages and repositories
+OPAM has been created and is maintained by [OCamlPro](http://www.ocamlpro.com/). Bug reports and feature requests for the OPAM tool should be reported on [OPAM's issue-tracker](https://github.com/OCamlPro/opam/issues). Packaging issues or requests for a new package can be reported on the [official repository's issue-tracker](https://github.com/OCamlPro/opam-repository/issues).
 
-* Ability to switch between different compiler versions
+General queries both the tool and the packages could be addressed on the [OCaml-platform mailing-list](http://lists.ocaml.org/listinfo/platform) and for insights and evolution of OPAM internals can can discussed on [OPAM-devel mailing-list](http://lists.ocaml.org/listinfo/opam-devel).
 
-The fine grained handling of dependencies is made possible by the use
-of the [CUDF](http://mancoosi.org/cudf/) library and the
-[dose3](http://mancoosi.org/software/#index2h1) solver developed by
-the [Mancoosi](http://www.mancoosi.org/) project, which is, among
-other things, used by Debian to manage their packages.
-
-Typically, OPAM will probably make your life easier if you recognize
-yourself in at least one of these profiles:
-
-* You use multiple versions of the OCaml compiler, or you hack the
-  compiler yourself and needs to frequently switch between compiler
-  versions.
-
-* You use or develop software that needs a specific and/or modified
-  version of the OCaml compiler to be installed.
-
-* You use or develop software that depends on a specific version of
-  an OCaml library, or you just want to install a specific version of
-  a package, not just the latest one.
-
-* You want to create your own packages yourself, put them on your own
-  repository, with minimal effort.
-
-A specific tutorial will be devoted to these use cases. In the
-meantime, let’s learn the basics. You can get started with the [Quick
-Install](Quick_Install.html) guide.
+Standard commercial terms and support on OPAM, as well as training and consulting services, are provided by [OCamlPro](http://www.ocamlpro.com/).
