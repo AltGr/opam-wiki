@@ -34,6 +34,8 @@ OPAM packages for [homebrew](http://mxcl.github.com/homebrew/) and [MacPorts](ht
   port install opam # using MacPort
 ```
 
+See also [howto setup Emacs.app](macosx_emacs_app.html) for opam usage.
+
 ## Binary installer
 
 *Warning: This method only works with Darwin and Linux 64bits architecture.*
