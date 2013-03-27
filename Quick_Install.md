@@ -61,7 +61,9 @@ You can also specify which version of OCaml you want to install:
 
 #### Getting the Sources
 
-Sources of the latest stable version of OPAM are available [here](https://github.com/OCamlPro/opam/archive/latest.tar.gz).
+Sources of the latest stable version of OPAM are available on [Github](https://github.com/OCamlPro/opam/tags]. You can aslo download the full archives, including OPAM dependencies:
+
+* [1.0.1](http://www.ocamlpro.com/pub/opam-full-1.0.1.tar.gz) MD5 (opam-full-1.0.0.tar.gz) = bad431672f3463214a00e1642edc4055
 
 Once the archive downloaded and extracted, you can then run the usual commands:
 
