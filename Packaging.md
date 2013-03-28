@@ -147,7 +147,9 @@ this will work as well).
 
 You can now check that this new repository exists:
 
+```
 $ opam repo  # eq. to 'opam repo list'
+```
 
 This command displays the list of repositories, with `testing`
 having the highest priority (you can use `opam repo priority` to
