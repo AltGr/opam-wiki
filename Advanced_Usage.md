@@ -241,7 +241,7 @@ OPAM will add the default OPAM repository when initializing, and you
 add your development repository afterwards under the name *devel*. The
 *git* backend will be used because the URL starts by `git://`. By
 default, OPAM manage to figure out automatically which backend to
-use. See `opam remote -help` for more information.
+use. See `opam help remote` for more information.
 
 ### You want more control over the public repository
 
@@ -252,7 +252,7 @@ yourself.
 In this case, you probably want to do
 
 ```
-git clone git://github.com/OCamlPro/opam.git ~/myrepo
+git clone git://github.com/OCamlPro/opam-repository.git ~/myrepo
 opam init default ~/myrepo
 ```
 
