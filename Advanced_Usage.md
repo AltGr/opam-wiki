@@ -159,14 +159,13 @@ compiler to another one”. It is useful if you want to have the ability
 to fork a given compiler. The syntax is
 
 ```
-opam switch 4.00.0
-opam switch export -f universe_for_4.00.0
-opam switch 4.00.1
-opam switch import -f universe_for_4.00.0
+opam switch <version>
+opam switch export -f universe_for_<version>
+opam switch <other-version>
+opam switch import -f universe_for_<version>
 ```
 
-This will install all packages installed in the compiler `<version>`
-into the currently selected compiler.
+The `import` installs all packages from the file into the currently selected compiler. The above sequence of commands will install all packages installed in the compiler `<version>` into the compiler `<other-version>`.
 
 ## Version pinning
 
