@@ -324,6 +324,7 @@ You can install additional libraries and toplevels the same way. For instance:
 lib: [ "META" "lib/foo.cmi" "lib/foo.cmo" "lib/foo.cmx" ]
 ```
 
+Remark: ideally, the `.install` should be dynamically created by the package build system at the root of the project and should be named `$(OPAM_PACKAGE_NAME).opam` (`$OPAM_PACKAGE_NAME` is automatically set by OPAM). However, due to the lack of such support for this feature in existing build system, most of the existing packages have a *static* `.install` file, which is usually sufficient for simple needs.
 
 For comprehensive information about this facility refer to the Section 1.2.5 of OPAM
 [developer manual](https://github.com/OCamlPro/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true)
