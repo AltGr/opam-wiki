@@ -20,9 +20,9 @@ The [opam](http://aur.archlinux.org/packages.php?ID=62127) and [opam-git](http:/
 #### Debian and Ubuntu
 
 ```
-  echo "deb [arch=amd64] http://www.recoil.org/~avsm/ wheezy main" >> /etc/apt/sources.list
+  add-apt-repository ppa:avsm/ppa
   apt-get update
-  apt-get install opam
+  apt-get install ocaml opam
 ```
 
 #### OSX
