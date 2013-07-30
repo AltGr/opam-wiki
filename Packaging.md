@@ -287,10 +287,13 @@ fine grained version constraints.
 ## Manually installing binaries or libaries
 
 Most of the time, when a package is built, binaries and/or libraries
-that it provides are installed automatically. But sometimes a source
-package does not install a binary that it produced because it has not
-been included its `make install` command (or equivalent). For example,
-the package *xmlm* has this following `opam` file:
+that it provides are installed by the package's build
+commands. However, for various reasons, sometimes a source package's
+build commands do not allow you to install all the files you would
+like or do not install them with the name or path you would like. Opam
+allows you to control installed files precisely by providing a
+`.install` file. For example, the package *xmlm* has this following
+`opam` file:
 
 ```
 opam-version: "1"
@@ -312,19 +315,43 @@ and has additional file `files/xmlm.install`:
 bin: ["_build/test/xmltrip.native" {"xmltrip"}]
 ```
 
-This has the semantic: “install the file of path
+This has the semantics: “install the file of path
 `_build/test/xmltrip.native` relative to the root of the source
 package into the directory returned by the command `opam config var
 bin` under the name `xmltrip`”. If the source filename starts by `?`,
 the installation will not fail if the file is not present.
 
-You can install additional libraries and toplevels the same way. For instance:
+Thus, this additional file gets installed and removed by opam, in
+addition to those installed by the `ocaml setup.ml -install` and
+removed by the `ocamlfind remove xmlm` commands.
+
+The `bin` section installs files in opam's `bin` directory. You can
+also define a list of files to be installed in the sections: `lib`,
+`toplevel`, `share`, `doc`, `misc`, `stublibs`, and `man`. For
+example, to install additional library files, you can have the
+section:
 
 ```
 lib: [ "META" "lib/foo.cmi" "lib/foo.cmo" "lib/foo.cmx" ]
 ```
 
-Remark: ideally, the `.install` should be dynamically created by the package build system at the root of the project and should be named `$(OPAM_PACKAGE_NAME).opam` (`$OPAM_PACKAGE_NAME` is automatically set by OPAM). However, due to the lack of such support for this feature in existing build system, most of the existing packages have a *static* `.install` file, which is usually sufficient for simple needs.
+Note the destination name in curly braces can be omitted if no
+modification to the filename is necessary.
+
+Ideally, the `.install` file should be dynamically created by the
+package build system at the root of the project and should be named
+`$(OPAM_PACKAGE_NAME).install` (`$OPAM_PACKAGE_NAME` is automatically
+set by OPAM). If it comprehensively lists every file that should be
+installed, then the `build` section of the package's `opam` file
+should exclude a `make install` (or equivalent) command, and the
+`remove` section should be omitted.
+
+Aside from dynamically generating this file, it is also possible to
+include a static version in a package under the `files` sub-directory,
+as is the case for the xmlm example above. This is less ideal than
+dynamically generating it, but is supported because package developers
+may find it easier to generate this file manually than figuring out
+how to dynamically generate it with their build system.
 
 For comprehensive information about this facility refer to the Section 1.2.5 of OPAM
 [developer manual](https://github.com/OCamlPro/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true)
