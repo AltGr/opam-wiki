@@ -361,7 +361,7 @@ For comprehensive information about this facility refer to the Section 1.2.5 of 
 Some packages require a specific OCaml version to work and thus can
 only be installed under specific compiler versions. To specify such a
 constraint, you can add a field `ocaml-version: [ <
-"4.00.0" ]` to the `opam` file. This particular constraint implies
+"4.00.0" ]` (or `available: [ ocaml-version < "4.00.0" ]` for OPAM 1.1 on) to the `opam` file. This particular constraint implies
 that the package cannot be built or installed under OCaml 4.00.0 or
 later.
 
