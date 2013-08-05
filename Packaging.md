@@ -135,7 +135,7 @@ The easiest way to test your new packages is to set-up a local
 repository for testing purposes.
 
 ```
-$ mkdir -k /tmp/testing
+$ mkdir -p /tmp/testing
 $ opam repo add testing /tmp/testing
 ```
 
@@ -157,7 +157,7 @@ change the relative repository priorities later).
 
 Now it is time to populate `/tmp/testing/packages` with your new package
 files. For instance, if you want to test the version `1.1.3` of `ounit`,
-you have to create `/tmp/packages/ounit.1.1.3/{opam,descr,url}`
+you have to create `/tmp/testing/packages/ounit.1.1.3/{opam,descr,url}`
 following the guidelines defined above.
 
 To take this changes into account, update your testing repository:
