@@ -73,3 +73,10 @@ If you want to work with a local copy of that package, just do `opam pin <packag
 If you want the bleeding edge version of a stable package, you can even do `opam pin <package> git://foo/bar`.
 
 Quite the swiss-army knife, but each of those scenarios has come in useful at one point or another, particularly when hacking on Mirage which requires rebuilding lots of forward dependencies if (e.g.) a network driver library is being modified.
+
+***
+#### Where do I report Bugs, Issues and Feature Requests?
+
+Bug reports and feature requests for the OPAM tool should be reported on [OPAM's issue-tracker](https://github.com/OCamlPro/opam/issues). Packaging issues or requests for a new package can be reported on the [official repository's issue-tracker](https://github.com/OCamlPro/opam-repository/issues).
+
+General queries for both the tool and the packages can be addressed on the [OCaml-platform mailing-list](http://lists.ocaml.org/listinfo/platform) and insights and evolution of OPAM internals can discussed on the [OPAM-devel mailing-list](http://lists.ocaml.org/listinfo/opam-devel).
