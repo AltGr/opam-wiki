@@ -102,5 +102,5 @@ at the root of the sources. Or you can simply remove OPAM binaries, manual pages
 
 ```
 $ rm -rf $(opam config var root)
-$ rm -f  $(which opam) $(which opam-mk-repo)
+$ rm -f  $(which opam) $(which opam-admin)
 ```

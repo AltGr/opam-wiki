@@ -1,7 +1,5 @@
 # OPAM FAQ
 
-***
-
 ### How to upgrade OPAM itself to its latest version ?
 
 In summary: upgrade the OPAM binary to the latest and run `opam update` to update your package descriptions. You won't see this message again.
@@ -47,13 +45,12 @@ The compiler description isn't simply called "trunk", without a reference to a v
 
 One option is to have a very high version, so that any packages with a lower bound will continue to work.  The other option (which I chose) is to pick the current working version, since compiler releases only happen a couple of times a year.  We can improve on this...
 
-***
 
-#### Now I want to create my first package.  I've followed the instructions from http://opam.ocamlpro.com/doc/Packaging.html but I don't know where to find opam-mk-repo (I've installed opam from the amd64 linux binary).
+#### Now I want to create my first package.  I've followed the instructions from http://opam.ocamlpro.com/doc/Packaging.html but I don't know where to find opam-admin (I've installed opam from the amd64 linux binary).
 
 (that binary is hopefully just a stopgap until the OPAM binary packages become more widely available)
 
-`opam-mk-repo` is installed as part of OPAM, so you'll need to install from source.  However, you don't actually need to create a repository unless you want to host a mirror of the tarballs. Simply try this:
+`opam-admin` is installed as part of OPAM, so you'll need to install from source.  However, you don't actually need to create a repository unless you want to host a mirror of the tarballs. Simply try this:
 
 ````
 $ mkdir -p my-repo/packages
@@ -74,7 +71,18 @@ If you want the bleeding edge version of a stable package, you can even do `opam
 
 Quite the swiss-army knife, but each of those scenarios has come in useful at one point or another, particularly when hacking on Mirage which requires rebuilding lots of forward dependencies if (e.g.) a network driver library is being modified.
 
-***
+### How do I create an HTTP repository
+
+It is very easy to create and maintain your own HTTP repository:
+
+```
+$ git clone https://github.com/OCamlPro/opam.git
+$ cd opam
+$ opam-admin make
+```
+
+The last command will create all the `archives/NAME.VERSION+opam.tar.gz` files, `urls.txt` and `index.tar.gz`.
+
 #### Where do I report Bugs, Issues and Feature Requests?
 
 Bug reports and feature requests for the OPAM tool should be reported on [OPAM's issue-tracker](https://github.com/OCamlPro/opam/issues). Packaging issues or requests for a new package can be reported on the [official repository's issue-tracker](https://github.com/OCamlPro/opam-repository/issues).

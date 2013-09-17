@@ -173,19 +173,22 @@ available. If this is the case, you can install it by doing:
 $ opam install ounit.1.1.3
 ```
 
-*Remark*: you can use `opam-mk-repo` to simulate the creation of OPAM
+*Remark*: you can use `opam-admin` to simulate the creation of OPAM
 package archives done on `opam.ocamlpro.com`:
 
 ```
-$ cd /tmp/testing && opam-mk-repo -g ounit
+$ cd /tmp/testing && opam-admin check && opam-admin make -g ounit
 ```
 
 This command will:
-* download the upstream archive, and generate the correct checksum
+* Check that your metadata are well-formed.
+* Download the upstream archive, and generate the correct checksum
   (because of `-g);
-* create the archive `archives/ounit.1.1.3+opam.tar.gz` containing
+* Create the archive `archives/ounit.1.1.3+opam.tar.gz` containing
   the content of the upstream archive + the files in
-  `packages/ounit.1.1.3/files/`.
+  `packages/ounit.1.1.3/files/`
+* Create `urls.txt` and `index.tar.gz` at the root of your repository,
+  which will let you host it as an HTTP remote.
 
 If `archives/ounit.1.1.3+opam.tar.gz` exists, OPAM will use it
 directly instead of downloading the archive upstream.
