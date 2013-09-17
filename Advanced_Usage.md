@@ -27,7 +27,7 @@ You are now ready to install packages. But first you probably want to
 see what packages are available and get some info about those
 packages.
 
-### ``opam list`` 
+### ``opam list``
 
 This will display as many lines as there are packages available, and
 each line displays the name of the package, its version if it is
@@ -186,6 +186,8 @@ opam pin <package> none
 ```
 
 You can also pin a package to a specific version: `opam pin <package> <version>`
+
+By default, local directories will be pinned as `local` backends. You can change that default choice by forcing a given backend kind using the `--kind` option.
 
 ## Handling of repositories
 
