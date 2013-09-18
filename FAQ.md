@@ -1,6 +1,6 @@
 # OPAM FAQ
 
-### How to upgrade OPAM itself to its latest version ?
+#### How to upgrade OPAM itself to its latest version ?
 
 In summary: upgrade the OPAM binary to the latest and run `opam update` to update your package descriptions. You won't see this message again.
 
@@ -18,6 +18,9 @@ Current options:
 
 * On the various BSDs, we should have ports when shortly (OPAM mostly works, but many packages are a little broken on the BSDs due to GNU make vs BSD make problems. Easy to fix, but there are a lot of packages to test now).
 
+#### How do I upgrade the system compiler of OPAM after installing a new version of OCaml
+
+OPAM should automatically detect that a new version of OCaml has been installed on your system and it will propose you to update. If something went wrong, you can use `opam switch reinstall system` to recompile you system compiler switch with the new compiler version.
 
 #### I have weird checksum errors: where does they come from ?
 
@@ -71,7 +74,7 @@ If you want the bleeding edge version of a stable package, you can even do `opam
 
 Quite the swiss-army knife, but each of those scenarios has come in useful at one point or another, particularly when hacking on Mirage which requires rebuilding lots of forward dependencies if (e.g.) a network driver library is being modified.
 
-### How do I create an HTTP repository
+#### How do I create an HTTP repository
 
 It is very easy to create and maintain your own HTTP repository:
 
