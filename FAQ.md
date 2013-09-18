@@ -22,6 +22,16 @@ Current options:
 
 OPAM should automatically detect that a new version of OCaml has been installed on your system and it will propose you to update. If something went wrong, you can use `opam switch reinstall system` to recompile you system compiler switch with the new compiler version.
 
+#### What's the difference between 'fast' and 'slow' clone ?
+
+With OPAM, you have the ability to create new compiler environments (dubbed 'switches' in the OPAM terminology) by using the `opam switch` command.
+
+You have two kinds of switches: The slow ones, where you install a fresh compiler each time: For instance, `opam switch myswitch --alias-of 4.01.00` will download, compile and install the `4.01.00` compiler into `~/.opam/myswitch/bin/` -- you can have as many `4.01.00` instances as you want, but it can take quite a long time (minutes) to get them ready.
+
+However, you can also use the compiler installed on your system and have fast clones. `opam switch myswitch --alias-of system` will use the compiler installed on your system but install all the packages libraries in `~/.opam/myswitch/lib/`.
+
+Remark: `opam switch xxx --alias-of xxx` is equivalent to `opam switch xxx` if `xxx` is not already installed.
+
 #### I have weird checksum errors: where does they come from ?
 
 First of all, you should update your repositories (`opam update`).
