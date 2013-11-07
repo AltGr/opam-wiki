@@ -8,7 +8,7 @@ sources. This is *not* the recommended way of installing OPAM.
 
 ### Prerequisites:
 
-* ocaml
+* ocaml (at least 3.12.1)
 * curl or wget
 * git (optional, to use the git backend)
 * rsync (optional, to use the rsync backend)
