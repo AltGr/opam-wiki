@@ -10,3 +10,5 @@ A simple solution to this problem is to invoke the compilation mode shell as a l
   ;; Invoke login shells, so that .profile or .bash_profile is read
   (setq shell-command-switch "-lc")))
 ```
+
+Note that unfortunately this won't work for tools like `ocp-{indent,index}` that are installed by `opam` and invoked through `elisp` subprocess creation functions. 
