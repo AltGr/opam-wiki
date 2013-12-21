@@ -1,7 +1,7 @@
 # Install OPAM in 2 minutes
 
 This page describes how to install and configure OPAM.
-For further help and to learn how to use OPAM, you can either type
+For further help on how to use OPAM, either read
 `opam --help` or move on to the [Basic Usage](Basic_Usage.html) guide.
 
 ## Installing OPAM with your distribution
@@ -17,13 +17,19 @@ The [opam](http://aur.archlinux.org/packages.php?ID=62127) and [opam-git](http:/
   yaourt -S opam
 ```
 
-#### Debian and Ubuntu
+#### Ubuntu (Precise and upwards)
 
 ```
   add-apt-repository ppa:avsm/ppa
   apt-get update
   apt-get install ocaml opam
 ```
+
+There are also PPAs available that are [pinned to specific revisions](http://launchpad.net/~avsm) of OCaml and OPAM to help with [automated testing](http://anil.recoil.org/2013/09/30/travis-and-ocaml.html).
+
+#### Debian
+
+Binary packages of OPAM 1.1 are available in for the [testing](http://packages.debian.org/jessie/opam) and [unstable](http://packages.debian.org/sid/opam) distributions.  See [here](http://packages.debian.org/search?searchon=names&keywords=opam)  for the latest.  Wheezy users will have to compile from source, pin the packages from the testing repository, or request a backport from Debian.
 
 #### OSX
 
@@ -43,7 +49,7 @@ See also [howto setup Emacs.app](https://github.com/OCamlPro/opam/wiki/Setup-Ema
 If your platform is of a different kind or if using a pre-compiled binary isn't to your
 taste, use another method.
 
-To install the latest stable opam in `/usr/local/bin` (you can change the path) and install the latest version of OCaml as well, you just need to download the binary auto-installed and run it:
+To install the latest stable OPAM in `/usr/local/bin` (you can change the path) and install the latest version of OCaml as well, you just need to download the binary auto-installer and run it:
 
 ```
   wget http://www.ocamlpro.com/pub/opam_installer.sh
@@ -61,7 +67,7 @@ You can also specify which version of OCaml you want to install:
 
 #### Getting the Sources
 
-Sources of the latest stable version of OPAM are available on [Github](https://github.com/ocaml/opam/releases). You can aslo download the full archives, including OPAM dependencies:
+Sources of the latest stable version of OPAM are available on [Github](https://github.com/ocaml/opam/releases). You can also download the full archives, including OPAM dependencies:
 
 * [1.1.0](http://www.ocamlpro.com/pub/opam-full-1.1.0.tar.gz) MD5 (opam-full-1.1.0.tar.gz) = d6e2f56b10c0be73b5677963e6659d24
 
