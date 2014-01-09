@@ -393,9 +393,12 @@ OPAM has the following behaviour:
 - When upgrading packages, OPAM will merge the last changes before
   rebuilding and upgrading the packages
 
-If you host your project on *Github*, you may not use git packages but
+- You can specify a branch other than the default by suffixing the
+  url with `#<branch>`, eg. `git: git@github.com:me/project.git#next`
+
+If you host your project on *Github*, you may
 instead use github’s functionality to create a tarball from a git
-repository. Is is generally available at
+repository. It is generally available at
 `https://github.com/<your-id>/<your-project>/tarball/<branch-or-tag>`. You
 can use this url to create “normal” — non-git packages from git
 repositories hosted on github.
