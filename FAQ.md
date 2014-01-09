@@ -2,23 +2,21 @@
 
 #### How to upgrade OPAM itself to its latest version ?
 
-In summary: upgrade the OPAM binary to the latest and run `opam update` to update your package descriptions. You won't see this message again.
-
-Some more detail: In the heady days of early OPAM when it had no users, we thought auto-updating via OPAM would be a good strategy. It turned out not to be such a great idea, as there are lots of corner cases with bootstrapping it, and particularly during repository format changes.
-
-Nowadays, OPAM has settled down in terms of features and interfaces, and starting to get packaged up in upstream distributions. This means that you should be able to upgrade via that OS-specific process and get the latest OPAM binary.
-
-Current options:
+In summary: upgrade the OPAM binary to the latest and run `opam update` to update your package descriptions.
 
 * Upgrade from source: fetch the latest sources and ./configure && make && sudo make install. If you run into odd build errors from old trees, you may find a make distclean will help before the configure.
 
 * On MacOS X, we keep the Homebrew packages up-to-date, so `brew update && brew upgrade opam` will do the trick. I believe there are MacPorts packages also, but I don't track them closely.
 
-* On Debian, we have dpkg descriptions, but the NEW queue is blocked due to the Wheezy release. There are unofficial binary packages, but I'd recommend a source installation for the moment.
+* On Debian, packages in *sid* should be fairly up-to-date.
 
 * On the various BSDs, we should have ports when shortly (OPAM mostly works, but many packages are a little broken on the BSDs due to GNU make vs BSD make problems. Easy to fix, but there are a lot of packages to test now).
 
-#### How do I upgrade the system compiler of OPAM after installing a new version of OCaml
+#### What are the minimum requirements ?
+
+1GB of memory should be all you need. It was reported that you may run into problems with 512MB of RAM and no swap.
+
+#### How do I upgrade the system compiler of OPAM after installing a new version of OCaml ?
 
 OPAM should automatically detect that a new version of OCaml has been installed on your system and it will propose you to update. If something went wrong, you can use `opam switch reinstall system` to recompile you system compiler switch with the new compiler version.
 
