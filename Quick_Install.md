@@ -52,7 +52,7 @@ taste, use another method.
 To install the latest stable OPAM in `/usr/local/bin` (you can change the path) and install the latest version of OCaml as well, you just need to download the binary auto-installer and run it:
 
 ```
-  wget http://www.ocamlpro.com/pub/opam_installer.sh
+  wget https://raw.github.com/ocaml/opam/master/shell/opam_installer.sh
   sh ./opam_installer.sh /usr/local/bin
 ```
 
