@@ -10,7 +10,7 @@ The following commands will enable you to obtain information on available
 packages:
 
 ```
-opam list               # List all available packages
+opam list -a            # List all available packages
 opam search QUERY       # List packages with QUERY in their name or description
 opam info PACKAGE       # Display information about PACKAGE
 ```
