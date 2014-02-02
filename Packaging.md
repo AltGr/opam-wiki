@@ -245,7 +245,13 @@ Let us see how it works via the following example, which shows the `opam` file o
 opam-version: "1"
 maintainer: "contact@ocamlpro.com"
 build: [
-  ["./configure" "--%{conf-libev:enable}%-libev" "--%{react:enable}%-react" "--%{ssl:enable}%-ssl" "--%{base-unix:enable}%-unix" "--%{base-unix:enable}%-extra" "--%{base-threads:enable}%-preemptive"]
+  ["./configure"
+     "--%{conf-libev:enable}%-libev"
+     "--%{react:enable}%-react"
+     "--%{ssl:enable}%-ssl"
+     "--%{base-unix:enable}%-unix"
+     "--%{base-unix:enable}%-extra"
+     "--%{base-threads:enable}%-preemptive"]
   [make "build"]
   [make "install"]
 ]
