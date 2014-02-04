@@ -28,7 +28,7 @@ jumping in for new users a breeze.
 
 ## Build and deployment
 
-   - opam-in-a-box, a first glimpse of the platform: simplified architecture
+   - [opam-in-a-box](https://github.com/ocaml/opam/issues/1035), a first glimpse of the platform: simplified architecture
      giving access to all needed components. Easy to build custom images,
      trivial to deploy ; does not yet give the best integration and ease of use.
      
