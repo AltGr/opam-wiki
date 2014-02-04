@@ -8,5 +8,6 @@ This page tracks the state of binary packaging of OPAM on upstream distributions
 | Macports (MacOS X) | 1.1.1 | ??? | builtin | [trac to Portfile](https://trac.macports.org/browser/trunk/dports/sysutils/opam/Portfile) has wrong homepage
 | Arch Linux | 1.1.1 | Vincent Bernardoff | builtin | [package info](https://aur.archlinux.org/packages.php?ID=62127)
 | NixOS | 1.1.0 | Malcolm Matalka | builtin | [github](https://github.com/NixOS/nixpkgs/tree/master/pkgs/development/tools/ocaml/opam)
-| FreeBSD | ?? | | [aspcud port](http://www.freshports.org/math/aspcud/) | |
-| OpenBSD | ?? | | | | 
+| FreeBSD | from source | | [aspcud port](http://www.freshports.org/math/aspcud/) | |
+| OpenBSD | from source | | | | 
+| Windows | not supported as of 1.1.1 | | | | 
