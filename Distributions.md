@@ -11,7 +11,7 @@ This page tracks the state of binary packaging of OPAM on upstream distributions
 | Exherbo Linux | 1.1.1 | @nbraud | builtin | [unofficial ocaml repo](https://github.com/Exherbo/ocaml-unofficial/)
 | NixOS | 1.1.0 | Malcolm Matalka | builtin | [github](https://github.com/NixOS/nixpkgs/tree/master/pkgs/development/tools/ocaml/opam)
 | FreeBSD | from source | | [aspcud port](http://www.freshports.org/math/aspcud/) | |
-| CentOS | from source | | | |
-| Fedora | from source | | | | 
-| OpenBSD | from source | | | | 
+| CentOS | from source | | | | [need spec file](https://github.com/ocaml/opam/issues/409)
+| Fedora | from source | | | |  [need spec file](https://github.com/ocaml/opam/issues/409)
+| OpenBSD | from source | | | | [old port submitted to list](http://openbsd.7691.n7.nabble.com/new-opam-1-0-0-td225057.html)
 | Windows | not supported as of 1.1.1 | | | | 
