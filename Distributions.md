@@ -7,8 +7,8 @@ This page tracks the state of binary packaging of OPAM on upstream distributions
 | Homebrew (MacOS X) | 1.1.1 | Anil Madhavapeddy | aspcud recommended | 
 | Macports (MacOS X) | 1.1.1 |  | builtin | [trac to Portfile](https://trac.macports.org/browser/trunk/dports/sysutils/opam/Portfile) has wrong homepage
 | Arch Linux | 1.1.1 | Vincent Bernardoff | builtin | [package info](https://aur.archlinux.org/packages.php?ID=62127)
-| Mageia Linux | 1.1.0 | | builtin | [cauldron rpm spec file](http://svnweb.mageia.org/packages/cauldron/opam/current/SPECS/opam.spec?view=markup)
 | Exherbo Linux | 1.1.1 | @nbraud | builtin | [unofficial ocaml repo](https://github.com/Exherbo/ocaml-unofficial/)
+| Mageia Linux | 1.1.0 | | builtin | [cauldron rpm spec file](http://svnweb.mageia.org/packages/cauldron/opam/current/SPECS/opam.spec?view=markup)
 | NixOS | 1.1.0 | Malcolm Matalka | builtin | [github](https://github.com/NixOS/nixpkgs/tree/master/pkgs/development/tools/ocaml/opam)
 | FreeBSD | from source | | [aspcud port](http://www.freshports.org/math/aspcud/) | |
 | CentOS | from source | | | | [need spec file](https://github.com/ocaml/opam/issues/409)
