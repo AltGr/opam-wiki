@@ -10,5 +10,7 @@ This page tracks the state of binary packaging of OPAM on upstream distributions
 | Mageia Linux | 1.1.0 | ??? | builtin | [cauldron rpm spec file](http://svnweb.mageia.org/packages/cauldron/opam/current/SPECS/opam.spec?view=markup)
 | NixOS | 1.1.0 | Malcolm Matalka | builtin | [github](https://github.com/NixOS/nixpkgs/tree/master/pkgs/development/tools/ocaml/opam)
 | FreeBSD | from source | | [aspcud port](http://www.freshports.org/math/aspcud/) | |
+| CentOS | from source | | | |
+| Fedora | from source | | | | 
 | OpenBSD | from source | | | | 
 | Windows | not supported as of 1.1.1 | | | | 
