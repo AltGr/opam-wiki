@@ -36,8 +36,9 @@ Binary packages of OPAM 1.1.0 are available for the [testing](http://packages.de
 OPAM packages for [homebrew](http://mxcl.github.com/homebrew/) and [MacPorts](http://www.macports.org/) are available:
 
 ```
-  brew install opam # using Homebrew
-  port install opam # using MacPort
+  brew install opam                   # using Homebrew on OSX Mavericks
+  brew install opam --without-aspcud  # using Homebrew on OSX Mountain Lion (or lower)
+  port install opam                   # using MacPort
 ```
 
 See also [howto setup Emacs.app](https://github.com/OCamlPro/opam/wiki/Setup-Emacs.app-on-macosx-for-opam-usage) for opam usage.
