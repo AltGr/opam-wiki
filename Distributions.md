@@ -10,7 +10,7 @@ This page tracks the state of binary packaging of OPAM on upstream distributions
 | Exherbo Linux | 1.1.1 | @nbraud | builtin | [unofficial ocaml repo](https://github.com/Exherbo/ocaml-unofficial/)
 | Mageia Linux | 1.1.0 | | builtin | [cauldron rpm spec file](http://svnweb.mageia.org/packages/cauldron/opam/current/SPECS/opam.spec?view=markup)
 | NixOS | 1.1.0 | Malcolm Matalka | builtin | [github](https://github.com/NixOS/nixpkgs/tree/master/pkgs/development/tools/ocaml/opam)
-| FreeBSD | from source | | [aspcud port](http://www.freshports.org/math/aspcud/) | |
+| FreeBSD | from source | Vsevolod Stakhov | [aspcud port](http://www.freshports.org/math/aspcud/) | |
 | CentOS | from source | | | | [need spec file](https://github.com/ocaml/opam/issues/409)
 | Fedora | from source | | | |  [need spec file](https://github.com/ocaml/opam/issues/409)
 | OpenBSD | from source | | | | [old port submitted to list](http://openbsd.7691.n7.nabble.com/new-opam-1-0-0-td225057.html)
