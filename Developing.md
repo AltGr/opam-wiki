@@ -43,7 +43,7 @@ Let us start by addressing issue 1. Is it very possible, even likely,
 that the OCamlPro OPAM repository is not up to date, or contains buggy
 packages. In this case, the first important thing to do is inform
 OPAM’s team about it by creating a new *issue* on the
-[opam-repository](https://github.com/OCamlPro/opam-repository) github
+[opam-repository](https://github.com/ocaml/opam-repository) github
 page, since the problems you’re having with it are very likely to
 affect other users as well, and maybe even make a patch and create a
 pull request, if you feel inspired and generous.
@@ -62,7 +62,7 @@ repository is generally more unstable than the other. If you know
 debian, think about its stable *vs* unstable repositories. To do that:
 
 ```
-opam remote add unstable git://github.com/OCamlPro/opam-repository.git
+opam remote add unstable git://github.com/ocaml/opam-repository.git
 ```
 
 This is **not the recommended** method however, as it is not likely to
@@ -74,7 +74,7 @@ This will give you maximal control over the repository OPAM is
 using. Just do a:
 
 ```
-git clone git://github.com/OCamlPro/opam-repository.git
+git clone git://github.com/ocaml/opam-repository.git
 opam remote add local /path/to/opam-repository
 ```
 

@@ -15,11 +15,11 @@ sources. This is *not* the recommended way of installing OPAM.
 
 ### Obtaining OPAM
 
-Download the latest stable version of OPAM [here](https://github.com/OCamlPro/opam/archive/latest.tar.gz).
+Download the latest stable version of OPAM [here](https://github.com/ocaml/opam/archive/latest.tar.gz).
 
 If you want to try the development (unstable) version of OPAM, clone
  the git repository: `git clone
- git://github.com/OCamlPro/opam.git`. Please keep in mind that this
+ git://github.com/ocaml/opam.git`. Please keep in mind that this
  version may not work as expected.
 
 ### Compiling OPAM
@@ -78,7 +78,7 @@ This will:
 
 * Create OPAM configuration files in `~/.opam`
 
-* Add the default remote repository at URL `http://opam.ocamlpro.com`
+* Add the default remote repository at URL `http://opam.ocaml.org`
   using opam’s HTTP repository backend.
 
 * Update your local environment to be able to use OPAM packages and compilers.

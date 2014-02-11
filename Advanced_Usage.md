@@ -253,7 +253,7 @@ yourself.
 In this case, you probably want to do
 
 ```
-git clone git://github.com/OCamlPro/opam-repository.git ~/myrepo
+git clone git://github.com/ocaml/opam-repository.git ~/myrepo
 opam init default ~/myrepo
 ```
 

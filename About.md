@@ -8,7 +8,7 @@ After few months of hard-work, and continuous support and resources from [OCamlL
 
 ### Getting Support
 
-OPAM has been created and is maintained by [OCamlPro](http://www.ocamlpro.com/). Bug reports and feature requests for the OPAM tool should be reported on [OPAM's issue-tracker](https://github.com/OCamlPro/opam/issues). Packaging issues or requests for a new package can be reported on the [official repository's issue-tracker](https://github.com/OCamlPro/opam-repository/issues).
+OPAM has been created and is maintained by [OCamlPro](http://www.ocamlpro.com/). Bug reports and feature requests for the OPAM tool should be reported on [OPAM's issue-tracker](https://github.com/ocaml/opam/issues). Packaging issues or requests for a new package can be reported on the [official repository's issue-tracker](https://github.com/ocaml/opam-repository/issues).
 
 General queries for both the tool and the packages could be addressed on the [OCaml-platform mailing-list](http://lists.ocaml.org/listinfo/platform) and insights and evolution of OPAM internals can discussed on the [OPAM-devel mailing-list](http://lists.ocaml.org/listinfo/opam-devel).
 

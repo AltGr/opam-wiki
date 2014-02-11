@@ -41,7 +41,7 @@ OPAM packages for [homebrew](http://mxcl.github.com/homebrew/) and [MacPorts](ht
   port install opam                   # using MacPort
 ```
 
-See also [howto setup Emacs.app](https://github.com/OCamlPro/opam/wiki/Setup-Emacs.app-on-macosx-for-opam-usage) for opam usage.
+See also [howto setup Emacs.app](https://github.com/ocaml/opam/wiki/Setup-Emacs.app-on-macosx-for-opam-usage) for opam usage.
 
 ## Binary installer
 

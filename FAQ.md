@@ -44,7 +44,7 @@ If this doesn't work as well, you can bypass the checksum checks using `-no-chec
 To reinstall it and refresh to a newer snapshot, just do `opam switch reinstall 4.01.0dev+trunk`, which will also attempt to recompile any packages you had in there before.
 
 It's also pretty easy to add your own branches; see
-https://github.com/OCamlPro/opam-repository/blob/master/compilers/4.01.0dev%2Btrunk.comp
+https://github.com/ocaml/opam-repository/blob/master/compilers/4.01.0dev%2Btrunk.comp
 ...for the trunk description, and there are several others out there.
 
 For instance, Pierre Chambart is maintaining his various optimisation patches in his repository as an example, so you can see how to maintain custom branches as normal OPAM remotes (just like for packages).
@@ -87,7 +87,7 @@ Quite the swiss-army knife, but each of those scenarios has come in useful at on
 It is very easy to create and maintain your own HTTP repository:
 
 ```
-$ git clone https://github.com/OCamlPro/opam.git
+$ git clone https://github.com/ocaml/opam.git
 $ cd opam
 $ opam-admin make
 ```
@@ -96,6 +96,6 @@ The last command will create all the `archives/NAME.VERSION+opam.tar.gz` files, 
 
 #### Where do I report Bugs, Issues and Feature Requests?
 
-Bug reports and feature requests for the OPAM tool should be reported on [OPAM's issue-tracker](https://github.com/OCamlPro/opam/issues). Packaging issues or requests for a new package can be reported on the [official repository's issue-tracker](https://github.com/OCamlPro/opam-repository/issues).
+Bug reports and feature requests for the OPAM tool should be reported on [OPAM's issue-tracker](https://github.com/ocaml/opam/issues). Packaging issues or requests for a new package can be reported on the [official repository's issue-tracker](https://github.com/ocaml/opam-repository/issues).
 
 General queries for both the tool and the packages can be addressed on the [OCaml-platform mailing-list](http://lists.ocaml.org/listinfo/platform) and insights and evolution of OPAM internals can discussed on the [OPAM-devel mailing-list](http://lists.ocaml.org/listinfo/opam-devel).

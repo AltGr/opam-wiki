@@ -84,7 +84,7 @@ description starting from the second line.
 
 The full ABNF specification of the syntax for *opam* files is
 available in OPAM
-[developer manual](https://github.com/OCamlPro/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true).
+[developer manual](https://github.com/ocaml/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true).
 In this file,
 `opam-version` MUST be `1`, and you should put your email in the
 `maintainer` field. `build` has OCaml type `string list list`, and
@@ -174,7 +174,7 @@ $ opam install ounit.1.1.3
 ```
 
 *Remark*: you can use `opam-admin` to simulate the creation of OPAM
-package archives done on `opam.ocamlpro.com`:
+package archives done on `opam.ocaml.org`:
 
 ```
 $ cd /tmp/testing && opam-admin check && opam-admin make -g ounit
@@ -363,7 +363,7 @@ may find it easier to generate this file manually than figuring out
 how to dynamically generate it with their build system.
 
 For comprehensive information about this facility refer to the Section 1.2.5 of OPAM
-[developer manual](https://github.com/OCamlPro/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true)
+[developer manual](https://github.com/ocaml/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true)
 
 ## Compiler version constraints
 
@@ -413,7 +413,7 @@ Note that git packages will normally never be included in the default
 OPAM repository, and are mainly an aid for developers who use OPAM in
 their development process. If you plan to do that, please have a look
 at the [Developing with OPAM
-tutorial](http://opam.ocamlpro.com/doc/Developing.html).
+tutorial](http://opam.ocaml.org/doc/Developing.html).
 
 ### Darcs packages
 
@@ -431,7 +431,7 @@ Although this tutorial covered most packaging cases, there are still
 packages that requires more tuning that what have been described
 above. If you find yourself stuck trying to package a software or a
 library, please read the OPAM
-[developer manual](https://github.com/OCamlPro/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true)
+[developer manual](https://github.com/ocaml/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true)
 (you will find it in the
 `doc` directory in the OPAM tarball) and/or read existing OPAM
 package descriptions for inspiration.
@@ -440,9 +440,9 @@ package descriptions for inspiration.
 
 This section will help you getting started with the process of
 submitting packages to the official OPAM repository. This repository
-is available at url [http://opam.ocamlpro.com], but its content is
+is available at url [http://opam.ocaml.org], but its content is
 generated from a [git
-repository](https://github.com/OCamlPro/opam-repository) hosted on
+repository](https://github.com/ocaml/opam-repository) hosted on
 [github](https://github.com/).
 
 To submit a package for inclusion in the official repository, all you
