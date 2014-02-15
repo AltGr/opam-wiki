@@ -31,6 +31,14 @@ There are also PPAs available that are [pinned to specific revisions](http://lau
 
 Binary packages of OPAM 1.1.0 are available for the [testing](http://packages.debian.org/jessie/opam) and [unstable](http://packages.debian.org/sid/opam) distributions.  OPAM 1.1.1 Shoud be available shortly, see [here](http://packages.debian.org/search?searchon=names&keywords=opam) for the latest.  Wheezy users are left with the options of compiling from source, pinning the packages from the testing repository, requesting a backport from Debian, or using our binary installer below.
 
+#### Mageia
+
+The opam package for Mageia can be installed with the command:
+
+```
+  urpmi opam
+```
+
 #### OSX
 
 OPAM packages for [homebrew](http://mxcl.github.com/homebrew/) and [MacPorts](http://www.macports.org/) are available:
