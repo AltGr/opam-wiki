@@ -6,7 +6,7 @@ This page tracks the state of binary packaging of OPAM on upstream distributions
 | Ubuntu Linux (PPA)  | 1.1.1  |  Anil Madhavapeddy | aspcud recommended | [PPAs](https://launchpad.net/~avsm) [Travis notes](http://anil.recoil.org/2013/09/30/travis-and-ocaml.html)
 | Homebrew (MacOS X) | 1.1.1 | Anil Madhavapeddy | aspcud [recommended](https://github.com/Homebrew/homebrew/blob/master/Library/Formula/aspcud.rb) | [1.1.1 pull req](https://github.com/Homebrew/homebrew/pull/26282), [1.1.0 pull req](https://github.com/Homebrew/homebrew/pull/24086)
 | Macports (MacOS X) | 1.1.1 |  | builtin | [trac to Portfile](https://trac.macports.org/browser/trunk/dports/sysutils/opam/Portfile) has wrong homepage
-| Arch Linux | 1.1.1 | Vincent Bernardoff | builtin | [package info](https://aur.archlinux.org/packages.php?ID=62127)
+| Arch Linux | 1.1.1 | Vincent Bernardoff | builtin (with [aspcud being uploaded](http://lists.ocaml.org/pipermail/opam-devel/2014-February/000457.html) | [package info](https://aur.archlinux.org/packages.php?ID=62127)
 | Exherbo Linux | 1.1.1 | @nbraud | builtin | [unofficial ocaml repo](https://github.com/Exherbo/ocaml-unofficial/)
 | Mageia Linux | 1.1.0 | | builtin | [cauldron rpm spec file](http://svnweb.mageia.org/packages/cauldron/opam/current/SPECS/opam.spec?view=markup)
 | NixOS | 1.1.1 | Malcolm Matalka | builtin | [github](https://github.com/NixOS/nixpkgs/tree/master/pkgs/development/tools/ocaml/opam), NixOS/nixpkgs#1810
