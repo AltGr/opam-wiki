@@ -32,7 +32,14 @@ For example if you are a very conservative user, you might try issueing the foll
 ## Yes, there are different versions of the user preference language
 
 The `opam` package manager is an instance of the approach described in the article "[A modular package manager architecture](http://dl.acm.org/citation.cfm?id=2401012)", which was one of the outcomes of the [Mancoosi](http://www.mancoosi.org) research project. This architecture relies on external dependency solvers for package managers, that communicate with the package manager front-end via the [CUDF format](http://www.mancoosi.org/cudf/).
-We have now several CUDF-compatible solvers, developed by a variety of research teams during the [MISC competitions](http://www.mancoosi.org/misc/) run yearly from 2010 to 2012. Each of these competitions led to improving the preferences language, by allowing the user progressively more flexibility.
+We have now several CUDF-compatible solvers, developed by a variety of research teams during the [MISC competitions](http://www.mancoosi.org/misc/) run yearly from 2010 to 2012:
+
+* [aspcud](http://www.cs.uni-potsdam.de/wv/aspcud/)
+* [Mccs](http://www.i3s.unice.fr/~cpjm/misc/mccs.html)
+* [Packup](http://sat.inesc-id.pt/~mikolas/sw/packup/)
+* [P2Cudf](https://wiki.eclipse.org/Equinox/p2/CUDFResolver)
+
+Each of these competitions led to improving the preferences language, by allowing the user progressively more flexibility.
 
 As of today, the preferences language described in the previous section, which corresponds to the one used in the 2010 competition, should be supported by all external solvers, but if you happen to use as external sovler one of the entrants of the 2012 competition, like recent versions of `aspcud`, then you have access to a more sophisticated set of preferences, described in [the 2012 MISC competition rules](http://www.mancoosi.org/misc-2012/criteria/). 
 For example, you could use
