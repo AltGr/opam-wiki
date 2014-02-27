@@ -34,6 +34,11 @@ For example if you are a very conservative user, you might try issueing the foll
 The `opam` package manager is an instance of the approach described in the article "[A modular package manager architecture](http://dl.acm.org/citation.cfm?id=2401012)", which was one of the outcomes of the [Mancoosi](http://www.mancoosi.org) research project. This architecture relies on external dependency solvers for package managers, that communicate with the package manager front-end via the [CUDF format](http://www.mancoosi.org/cudf/).
 We have now several CUDF-compatible solvers, developed by a variety of research teams during the [MISC competitions](http://www.mancoosi.org/misc/) run yearly from 2010 to 2012. Each of these competitions led to improving the preferences language, by allowing the user progressively more flexibility.
 
-As of today, the preferences language described in the previous section, which corresponds to the one used in the 2010 competition, should be supported by all external solvers, but if you happen to use as external sovler one of the entrants of the 2012 competition, like recent versions of `aspcud`, then you have access to a more sophisticated set of preferences, described in [the 2012 MISC competition rules](http://www.mancoosi.org/misc-2012/criteria/). For example, you could use `-count(removed), -count(down),-sum(solution,installedsize),-notuptodate(solution),-count(changed)` to instruct a solver to minimise downgrades, and mininise the installed size, among other criteria.
+As of today, the preferences language described in the previous section, which corresponds to the one used in the 2010 competition, should be supported by all external solvers, but if you happen to use as external sovler one of the entrants of the 2012 competition, like recent versions of `aspcud`, then you have access to a more sophisticated set of preferences, described in [the 2012 MISC competition rules](http://www.mancoosi.org/misc-2012/criteria/). 
+For example, you could use
+
+ `-count(removed), -count(down),-sum(solution,installedsize),-notuptodate(solution),-count(changed)`
+
+to instruct a solver to minimise downgrades, and mininise the installed size, among other criteria.
 
 The `aspcud` solver supports this extended language starting from its version 1.8.0, which unfortunately is not the version shipped by default with Ubuntu precise or Debian Wheezy.
