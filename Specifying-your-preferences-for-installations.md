@@ -8,7 +8,7 @@ User preferences, supported by `CUDF`-compatible solvers, are the means you can 
 
 ## How do I specify my preferences?
 
-Preferences are expressed using a simple language built by prefixing a little set of combinators with the - (minus) or + (plus) operators. The most useful combinators are the following ones:
+Preferences are expressed using a simple language built by prefixing a little set of combinators with the `-` (minus) or `+` (plus) operators. The most useful combinators are the following ones:
 
 * `new`  : the number of new packages
 * `changed` : the number of packages modified
