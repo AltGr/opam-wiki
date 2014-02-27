@@ -41,7 +41,7 @@ We have now several CUDF-compatible solvers, developed by a variety of research 
 
 Each of these competitions led to improving the preferences language, by allowing the user progressively more flexibility.
 
-As of today, the preferences language described in the previous section, which corresponds to the one used in the 2010 competition, should be supported by all external solvers, but if you happen to use as external sovler one of the entrants of the 2012 competition, like recent versions of `aspcud`, then you have access to a more sophisticated set of preferences, described in [the 2012 MISC competition rules](http://www.mancoosi.org/misc-2012/criteria/). 
+As of today, the preferences language described in the previous section, which corresponds to the one used in the 2010 competition, should be supported by all external solvers, but if you happen to use as external solver one of the entrants of the 2012 competition, like recent versions of `aspcud`, then you have access to a more sophisticated set of preferences, described in [the 2012 MISC competition rules](http://www.mancoosi.org/misc-2012/criteria/). 
 For example, you could use
 
  `-count(removed), -count(down),-sum(solution,installedsize),-notuptodate(solution),-count(changed)`
