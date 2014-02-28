@@ -1,4 +1,4 @@
-# Specifying user Preferences for the external Solvers
+# Specifying user Preferences for the External Solvers
 
 A fundamental distinguishing feature of the `opam` package manager is the fact that it is designed to reuse state-of-the-art dependency solving technology that gives the users the possibility to express their preferences regarding the operations to be performed during an installation, instead of being bound to an hard-coded strategy.
 This section provides basic documentation on this feature, and its usage.
@@ -54,3 +54,7 @@ For example, you could use
 to instruct a solver to minimise downgrades, and mininise the installed size, among other criteria.
 
 The `aspcud` solver supports this extended language starting from its version 1.8.0, which unfortunately is not the version shipped by default with Ubuntu precise or Debian Wheezy.
+
+## Preferences only work with the external solvers
+
+For portability reasons, `opam` also embarks an ad-hoc solver module that is built by wrapping a set of heuristics around the code of the SAT-solver which is used in the [Dose Library](http://dose.gforge.inria.fr/public_html/) for detecting broken packages. This solver module has no support for user preferences, and is not able to manage correctly large package repositories: it is highly recommended that you install an external CUDF solver (`aspcud` is the one best supported today).
