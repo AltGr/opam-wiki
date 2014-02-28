@@ -1,3 +1,8 @@
+# Specifying user Preferences for the external Solvers
+
+A fundamental distinguishing feature of the `opam` package manager is the fact that it is designed to reuse state-of-the-art dependency solving technology that gives the users the possibility to express their preferences regarding the operations to be performed during an installation, instead of being bound to an hard-coded strategy.
+This section provides basic documentation on this feature, and its usage.
+
 ## What are user preferences for installations, and why are them important?
 When you request the installation of some packages, say p1...pn, `opam` has a lot to do: it needs to look at all the packages already installed on your machine, find all packages available from the repositories, consider your request, and then come up with a set of actions to be performed to satisfy your request.
 
