@@ -31,8 +31,14 @@ This is the default preference setting used by opam, and in practice it tries to
 On *nix systems, you can specify your preferences by using the `OPAMCRITERIA` environment variable.
 
 For example if you are a very conservative user, you might try issueing the following command (for `bash` users only, other shell users will need to adapt the example to the syntax used by their shell):
+```
+OPAMCRITERIA="-removed,-changed" opam install ...
+```
 
-`OPAMCRITERIA="-removed,-changed" opam install ... `
+This can also be used for some tricks: if for example you want to repair your set of installed packages, you can use the `opam upgrade` command without specifying a preference for newer versions in the criteria:
+```
+OPAMCRITERIA="-changed" opam upgrade
+```
 
 ## Yes, there are different versions of the user preference language
 
