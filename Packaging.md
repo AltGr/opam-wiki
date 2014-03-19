@@ -41,13 +41,13 @@ A minimum OPAM package is a directory containing three files: `descr`, `opam`, a
 The name of the directory defines the package name and version: `<package-name>.<package-version>`.
 In our case, the directory will be `ounit.1.1.2` and contain the following files:
 
-- `packages/<package-name>.<package-version>/descr`
+- `packages/<package-name>/<package-name>.<package-version>/descr`
 
 ```
 Unit testing framework inspired by the JUnit tool and the HUnit tool
 ```
 
-- `packages/<package-name>.<package-version>/opam`
+- `packages/<package-name>/<package-name>.<package-version>/opam`
 
 ```
 opam-version: "1"
@@ -62,7 +62,7 @@ remove: [
 depends: ["ocamlfind"]
 ```
 
-- `packages/<package-name>.<package-version>/url`
+- `packages/<package-name>/<package-name>.<package-version>/url`
 
 ```
 archive: "http://forge.ocamlcore.org/frs/download.php/886/ounit-1.1.2.tar.gz"
@@ -186,7 +186,7 @@ This command will:
   (because of `-g);
 * Create the archive `archives/ounit.1.1.3+opam.tar.gz` containing
   the content of the upstream archive + the files in
-  `packages/ounit.1.1.3/files/`
+  `packages/ounit/ounit.1.1.3/files/`
 * Create `urls.txt` and `index.tar.gz` at the root of your repository,
   which will let you host it as an HTTP remote.
 
