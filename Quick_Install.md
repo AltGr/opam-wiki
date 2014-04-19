@@ -17,7 +17,16 @@ The [opam](http://aur.archlinux.org/packages.php?ID=62127) and [opam-git](http:/
   yaourt -S opam
 ```
 
-#### Ubuntu (Precise and upwards)
+#### Ubuntu Trusty LTS
+
+OCaml 4.01.0 and OPAM 1.1.1 are included in Ubuntu Trusty's `universe` repository, so just install them as normal.
+
+```
+  apt-get update
+  apt-get install ocaml ocaml-native-compilers camlp4-extra opam
+```
+
+#### Ubuntu (Precise, Quantal, Raring and Saucy)
 
 ```
   add-apt-repository ppa:avsm/ppa
@@ -29,7 +38,7 @@ There are also PPAs available that are [pinned to specific revisions](http://lau
 
 #### Debian
 
-Binary packages of OPAM 1.1.0 are available for the [testing](http://packages.debian.org/jessie/opam) and [unstable](http://packages.debian.org/sid/opam) distributions.  OPAM 1.1.1 Shoud be available shortly, see [here](http://packages.debian.org/search?searchon=names&keywords=opam) for the latest.  Wheezy users are left with the options of compiling from source, pinning the packages from the testing repository, requesting a backport from Debian, or using our binary installer below.
+Binary packages of OPAM 1.1.1 are available for the [testing](http://packages.debian.org/jessie/opam) and [unstable](http://packages.debian.org/sid/opam) distributions.  Wheezy users are left with the options of compiling from source, pinning the packages from the testing repository, requesting a backport from Debian, or using our binary installer below.
 
 #### Mageia
 
