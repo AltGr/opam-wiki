@@ -17,6 +17,12 @@ The [opam](http://aur.archlinux.org/packages.php?ID=62127) and [opam-git](http:/
   yaourt -S opam
 ```
 
+#### [Exherbo](http://exherbo.org)
+
+Simply install the [`dev-ocaml/opam`](http://git.exherbo.org/summer/packages/dev-ocaml/opam/index.html) package: `cave resolve -x dev-opam/ocaml`.  
+You might need to add the `::ocaml-unofficial` repository first: `cave resolve -x repository/ocaml-unofficial`.
+
+
 #### Ubuntu Trusty LTS
 
 OCaml 4.01.0 and OPAM 1.1.1 are included in Ubuntu Trusty's `universe` repository, so just install them as normal.
