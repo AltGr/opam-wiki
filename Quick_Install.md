@@ -17,34 +17,14 @@ The [opam](http://aur.archlinux.org/packages.php?ID=62127) and [opam-git](http:/
   yaourt -S opam
 ```
 
+#### Debian
+
+Binary packages of OPAM 1.1.1 are available for the [testing](http://packages.debian.org/jessie/opam) and [unstable](http://packages.debian.org/sid/opam) distributions.  Wheezy users are left with the options of compiling from source, pinning the packages from the testing repository, requesting a backport from Debian, or using our binary installer below.
+
 #### [Exherbo](http://exherbo.org)
 
 Simply install the [`dev-ocaml/opam`](http://git.exherbo.org/summer/packages/dev-ocaml/opam/index.html) package: `cave resolve -x dev-opam/ocaml`.  
 You might need to add the `::ocaml-unofficial` repository first: `cave resolve -x repository/ocaml-unofficial`.
-
-
-#### Ubuntu Trusty LTS
-
-OCaml 4.01.0 and OPAM 1.1.1 are included in Ubuntu Trusty's `universe` repository, so just install them as normal.
-
-```
-  apt-get update
-  apt-get install ocaml ocaml-native-compilers camlp4-extra opam
-```
-
-#### Ubuntu (Precise, Quantal, Raring and Saucy)
-
-```
-  add-apt-repository ppa:avsm/ppa
-  apt-get update
-  apt-get install ocaml opam
-```
-
-There are also PPAs available that are [pinned to specific revisions](http://launchpad.net/~avsm) of OCaml and OPAM to help with [automated testing](http://anil.recoil.org/2013/09/30/travis-and-ocaml.html).
-
-#### Debian
-
-Binary packages of OPAM 1.1.1 are available for the [testing](http://packages.debian.org/jessie/opam) and [unstable](http://packages.debian.org/sid/opam) distributions.  Wheezy users are left with the options of compiling from source, pinning the packages from the testing repository, requesting a backport from Debian, or using our binary installer below.
 
 #### Mageia
 
@@ -65,6 +45,25 @@ OPAM packages for [homebrew](http://mxcl.github.com/homebrew/) and [MacPorts](ht
 ```
 
 See also [howto setup Emacs.app](https://github.com/ocaml/opam/wiki/Setup-Emacs.app-on-macosx-for-opam-usage) for opam usage.
+
+#### Ubuntu (Precise, Quantal, Raring and Saucy)
+
+```
+  add-apt-repository ppa:avsm/ppa
+  apt-get update
+  apt-get install ocaml opam
+```
+
+There are also PPAs available that are [pinned to specific revisions](http://launchpad.net/~avsm) of OCaml and OPAM to help with [automated testing](http://anil.recoil.org/2013/09/30/travis-and-ocaml.html).
+
+#### Ubuntu Trusty LTS
+
+OCaml 4.01.0 and OPAM 1.1.1 are included in Ubuntu Trusty's `universe` repository, so just install them as normal.
+
+```
+  apt-get update
+  apt-get install ocaml ocaml-native-compilers camlp4-extra opam
+```
 
 ## Binary installer
 
