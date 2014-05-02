@@ -11,7 +11,7 @@ Well, the answer is: it depends! It depends on what _you_ really want, and diffe
 
 User preferences, supported by `CUDF`-compatible solvers, are the means you can use to make the assumptions in your mind explicit and known to the solver used by `opam`, so that the actions performed on your machine correspond to your personalised needs.
 
-## How do I specify my preferences?
+## How do I express my preferences?
 
 Preferences are expressed using a simple language built by prefixing a little set of combinators with the `-` (minus) or `+` (plus) operators. The most useful combinators are the following ones:
 
@@ -24,21 +24,29 @@ For example, the preference  `-removed`  tells the solver that among all possibl
 
 These combinators can be combined in a comma separated sequence, that is treated in lexicographic order by the solver.
 
+### Default preferences for an upgrade
 For example, the preference  `-removed,-notuptodate,-changed`  tells the solver that after ensuring that removals are minimised, it should look for a solution that minimises also the number of packages wich are not at their latest version, and then reduce the changes to a minimum.
 
-This is the default preference setting used by opam, and in practice it tries to bring _all_ your packages to the latest version available, as far as this does not implies removing too many packages.
+This is the default preference setting used by `opam` when you perform an update or an upgrade, and in practice it tries to bring _all_ your packages to the latest version available, as far as this does not implies removing too many packages. It can be set using the environment variable `OPAMUPGRADECRITERIA`
 
-On *nix systems, you can specify your preferences by using the `OPAMCRITERIA` environment variable.
+### Default preferences for an install
+When you request to install a (set of) package(s), in general you do not expect to see all your existing packages updated, and this is why in this case `opam` uses a different default value `-removed,-changed,-notuptodate` that tries to minimise changes to the system.  It can be set using the environment variable `OPAMCRITERIA`
 
-For example if you are a very conservative user, you might try issueing the following command (for `bash` users only, other shell users will need to adapt the example to the syntax used by their shell):
+### Specifying preferences for opam
+
+Recent versions of `opam` allow to specify your criteria on the command line, using the `--criteria` option, that will apply only to the current command.
+For example if you are a very conservative user, you might try issueing the following command:
 ```
-OPAMCRITERIA="-removed,-changed" opam install ...
+opam install --criteria="-removed,-changed" ...
 ```
 
 This can also be used for some tricks: if for example you want to repair your set of installed packages, you can use the `opam upgrade` command without specifying a preference for newer versions in the criteria:
 ```
-OPAMCRITERIA="-changed" opam upgrade
+opam upgrade --criteria="-changed"
 ```
+
+You can also use the `OPAMCRITERIA` and `OPAMUPGRADECRITERIA` environment variables to specify your preferences (for example, adding your preferred settings to a shell profile). If both variables are set, upgrades are controlled by `OPAMUPGRADECRITERIA`, while `OPAMCRITERIA` applies to all other commands. 
+If only `OPAMCRITERIA` is set, it applies to all commands. If only `OPAMUPGRADECRITERIA` is set, it applies to upgrade commands only, while all other commands are controlled by the `opam` internal default preferences.
 
 ## Yes, there are different versions of the user preference language
 
