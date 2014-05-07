@@ -4,7 +4,9 @@
 
 In summary: upgrade the OPAM binary to the latest and run `opam update` to update your package descriptions.
 
-* Upgrade from source: fetch the latest sources and ./configure && make && sudo make install. If you run into odd build errors from old trees, you may find a make distclean will help before the configure.
+In short (more information in the [quick install][Quick_Install.html] guide):
+
+* Upgrade from source: fetch the latest sources and run `./configure && make lib-ext && make && sudo make install`. If you run into odd build errors from old trees, you may find a make distclean will help before the configure.
 
 * On MacOS X, we keep the Homebrew packages up-to-date, so `brew update && brew upgrade opam` will do the trick. I believe there are MacPorts packages also, but I don't track them closely.
 
@@ -20,7 +22,7 @@ In summary: upgrade the OPAM binary to the latest and run `opam update` to updat
 
 OPAM should automatically detect that a new version of OCaml has been installed on your system and it will propose you to update. If something went wrong, you can use `opam switch reinstall system` to recompile you system compiler switch with the new compiler version.
 
-#### What's the difference between 'fast' and 'slow' clone ?
+#### What's the difference between 'fast' and 'slow' clones ?
 
 With OPAM, you have the ability to create new compiler environments (dubbed 'switches' in the OPAM terminology) by using the `opam switch` command.
 
@@ -87,8 +89,8 @@ Quite the swiss-army knife, but each of those scenarios has come in useful at on
 It is very easy to create and maintain your own HTTP repository:
 
 ```
-$ git clone https://github.com/ocaml/opam.git
-$ cd opam
+$ git clone https://github.com/ocaml/opam-repository.git
+$ cd opam-repository
 $ opam-admin make
 ```
 

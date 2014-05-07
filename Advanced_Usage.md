@@ -27,7 +27,7 @@ You are now ready to install packages. But first you probably want to
 see what packages are available and get some info about those
 packages.
 
-### ``opam list``
+### ``opam list --all``
 
 This will display as many lines as there are packages available, and
 each line displays the name of the package, its version if it is
@@ -43,7 +43,7 @@ This will display something similar to `opam list` except for it is
 only going to display available packages whose name or description
 match the string *foo*.
 
-### ``opam info opam``
+### ``opam show opam``
 
 This will display information about the package *opam*. This
 information includes the installed version if the package is
@@ -94,7 +94,7 @@ opam upgrade
 
 to upgrade your packages. The dependency solver will be called to make
 sure the upgrade is possible, that is, that *most* packages can get
-upgraded. OPAM will select the the best upgrade scenario and display a
+upgraded. OPAM will select the best upgrade scenario and display a
 summary of what will be done during the upgrade. You will be asked if
 it should go ahead or not. This is similar to what happen when you
 upgrade your packages in most operating systems.
@@ -111,11 +111,11 @@ switch --help` will give you the full documentation. What follows is a
 short primer for the most useful features.
 
 * `opam switch list` will display a list of the available
-  compilers. The first section is a list of installed compilers on
-  this computer. It contains at least *system*, which is not a
-  compiler installed by opam but the compiler that was used to compile
-  opam in the first place. A “*” symbol will be displayed before the
-  current selected compiler.
+  standard compilers. The first section is a list of installed compilers on
+  this computer. It may contain *system*, which is not a
+  compiler installed by opam but a compiler that was already present on the system.
+  Use `--all` to show *all* available compilers, even the development and
+  the one for specific features.
 
 * `opam switch 4.00.0` will make opam to switch to OCaml 4.00.0. If
   opam did not install it already, it will do so now. The first *opam
@@ -123,13 +123,13 @@ short primer for the most useful features.
   OCaml 4.00.0.
 
 * `opam switch remove <version>` will just delete an opam-installed
-  compiler from your system, thus freeing some disk space.
+  compiler from your system, freeing some disk space.
 
 After switching to another compiler, opam will ask you to update your
 environment by running ``eval `opam config env` ``. Indeed, compiler
 switching rely on environment variables so that your shell can find
 the libraries and binaries corresponding to the compiler you
-selected. Please don’t forget to run this command!
+selected. Don’t forget to run this command!
 
 These are the basic features of *opam switch*. There is two useful
 additions to them, which we will present now:
@@ -165,7 +165,7 @@ opam switch <other-version>
 opam switch import -f universe_for_<version>
 ```
 
-The `import` installs all packages from the file into the currently selected compiler. The above sequence of commands will install all packages installed in the compiler `<version>` into the compiler `<other-version>`.
+The `import` installs all packages from the file into the currently selected compiler. The above sequence of commands will install all packages installed in the compiler `<version>` into the compiler `<other-version>`. The format is straight-forward and you may easily edit the `universe_for_<version>` by hand to fine-tune the set of packages to install.
 
 ## Version pinning
 
@@ -177,23 +177,25 @@ This command will use the content of `</local/path>` to compile `<package>`. Thi
 that the next time you will do `opam install <package>`, the compilation process will be
 using a mirror of `</local/path>` instead of downloading the archive. This also means that
 any modification to `</local/path>` will be picked up by `opam update`, and thus `opam upgrade`
-will recompile `<package>` (and its forward dependencies) if needed.
+will recompile `<package>` (and its forward dependencies) if needed. If the package's source
+directory includes an `opam` file or directory, it will be used by OPAM and override the
+default metadata for that package.
 
 To unpin a package, simply run:
 
 ```
-opam pin <package> none
+opam unpin <package>
 ```
 
 You can also pin a package to a specific version: `opam pin <package> <version>`
 
-By default, local directories will be pinned as `local` backends. You can change that default choice by forcing a given backend kind using the `--kind` option.
+By default, local directories will be pinned as `local` backends. You can change that default choice by forcing a given backend kind using the `--kind` option, to synchronize on git commits for example.
 
 ## Handling of repositories
 
 OPAM supports using multiple repositories at the same time, and
 supports multiple repository backends as well. Currently supported
-backends are *HTTP*, *rsync*, and *git*.
+backends are *HTTP*, *rsync*, and *git*/*hg*/*darcs*.
 
 * The *HTTP* backend is used when the repository is available via the
   HTTP protocol, typically because it resides on a public
@@ -227,7 +229,7 @@ Using multiple repositories covers several cases:
 
 ### You made packages and you want to use them
 
-in addition of the ones available in the default OPAM repository. In
+in addition to the ones available in the default OPAM repository. In
 order to do that, put these packages in a private repository and then
 add this repository in order to be able to install these packages the
 same way you install public OPAM packages. For example, if your
