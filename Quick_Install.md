@@ -56,6 +56,8 @@ See also [howto setup Emacs.app](https://github.com/ocaml/opam/wiki/Setup-Emacs.
 
 There are also PPAs available that are [pinned to specific revisions](http://launchpad.net/~avsm) of OCaml and OPAM to help with [automated testing](http://anil.recoil.org/2013/09/30/travis-and-ocaml.html).
 
+If the command `add-apt-repository` is not available, you can install the package `python-software-properties` with `apt-get install python-software-properties`. Alternatively, you may manually edit the file `/etc/apt/sources.list` to add the PPA for your Ubuntu release.
+
 #### Ubuntu Trusty LTS
 
 OCaml 4.01.0 and OPAM 1.1.1 are included in Ubuntu Trusty's `universe` repository, so just install them as normal.
