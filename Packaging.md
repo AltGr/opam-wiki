@@ -6,7 +6,7 @@ An OPAM package is basically just a bunch of data on a software project:
 * Build, install and remove instructions
 * Some additional information (bugtracker, homepage, license, doc...)
 
-This document will go through a simple way to get it in the right format, wether
+This document will go through a simple way to get it in the right format, whether
 you are packaging your own project or someone else's. It's not a complete guide
 to the opam file format.
 
