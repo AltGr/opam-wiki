@@ -135,7 +135,7 @@ OPAM repository, so don't worry.
 ## Getting a full OPAM package
 
 There are still two things missing for a complete package.
-- An appalling description. Put it in a simple utf-8 text file `opam/descr`.
+- An appealing description. Put it in a simple utf-8 text file `opam/descr`.
   Like for git commits, the first line is a short summary, and a longer text may
   follow.
 - An URL where OPAM may download the project source for the release. If your
@@ -182,7 +182,10 @@ Here is how to do it from scratch:
 6. Wait for feedback !
 
 Don't forget to `opam pin remove <project>` once your project is on the
-repository, if you don't want to continue using your local version.
+repository, if you don't want to continue using your local version. Remember
+that as long as the package is pinned, OPAM will use the metadata found in its
+source if any, but otherwise only what is in the OPAM repository matters. Use
+`git pin list` to list all currently pinned packages.
 
 ## Some tricks
 
@@ -199,6 +202,17 @@ repository, if you don't want to continue using your local version.
         $ opam repository add path/to/opam-repository
   Don't forget to `opam pin remove <project>`, and test your changes to the repo
   directly.
+- Pins can also be used to try out experimental changes to a project with
+  minimal effort: you can pin to a git repository and even to a specific branch,
+  tag or hash by adding `#BRANCH` to the target. So say you want to try out
+  Joe's GitHub pull-request present on his branch `new-feature` on his fork of
+  `project`, just do
+
+        $ opam pin project git@github.com:Joe/project.git#new-feature
+
+  and OPAM will use that to get the source (and possibly updated metadata) of
+  the package; this works with any branch of any git repo, it's not github
+  specific.
 
 ## More on opam files
 
