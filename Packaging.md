@@ -230,6 +230,8 @@ source if any, but otherwise only what is in the OPAM repository matters. Use
   and OPAM will use that to get the source (and possibly updated metadata) of
   the package; this works with any branch of any git repo, it's not github
   specific.
+- We've been focusing on git above, but OPAM can handle darcs and mercurial
+  repositories too, using `darcs://` and `hg://`.
 
 ## More on opam files
 
