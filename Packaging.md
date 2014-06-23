@@ -164,8 +164,8 @@ Here is how to do it from scratch:
 
 1. Go to https://github.com/ocaml/opam-repository and hit the `Fork` button on
    the top right corner (you may be asked to login or register)
-2. Get the `clone URL` on the right, and run `git clone <url>` to get your local
-   copy
+2. Get the `clone URL` on the right, and, from the shell, run `git clone <url>`
+   to get your local copy
 3. Now we'll add the new package description into
    `opam-repository/packages/<project>/<project>.<version>/` and make that a git
    commit:
@@ -199,16 +199,17 @@ source if any, but otherwise only what is in the OPAM repository matters. Use
   `~/.opam/<switch>/overlay/<project>/`
 - You can set OPAM to use your local clone of the repository with
 
-        $ opam repository add path/to/opam-repository
+        $ opam repository add my-dev-repo path/to/opam-repository
   Don't forget to `opam pin remove <project>`, and test your changes to the repo
-  directly.
+  directly. Don't forget to `opam update my-dev-repo` each time to keep OPAM in
+  sync (`opam update` synches all repos, this will be faster).
 - Pins can also be used to try out experimental changes to a project with
   minimal effort: you can pin to a git repository and even to a specific branch,
   tag or hash by adding `#BRANCH` to the target. So say you want to try out
   Joe's GitHub pull-request present on his branch `new-feature` on his fork of
   `project`, just do
 
-        $ opam pin project git@github.com:Joe/project.git#new-feature
+        $ opam pin project git://github.com/Joe/project.git#new-feature
 
   and OPAM will use that to get the source (and possibly updated metadata) of
   the package; this works with any branch of any git repo, it's not github
