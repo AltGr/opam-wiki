@@ -51,13 +51,6 @@ $ git clone git://.../project.git
 $ cd project
 ```
 
-Now let's create an `opam` subdirectory that will hold the local OPAM metadata.
-It's a good idea to keep it with the package source to ease working with
-development versions -- the OPAM repository will hold it for releases.
-```
-$ mkdir opam
-```
-
 ### Opam pin
 
 OPAM 1.2 provides a feature that allows you to register packages locally,
@@ -69,7 +62,7 @@ So let's create a package _pinned_ to the current directory. We just need to
 choose a name and issue the command:
 
 ```
-$ opam pin add <project> .
+$ opam pin add -n <project> .
 ```
 
 ### The opam file
@@ -127,9 +120,8 @@ errors.
 
 ## Installing
 
-The best test is to let OPAM attempt to install your just created package. It
-should prompt you to do so already, but as for any package, you can do it by
-hand with:
+The best test is to let OPAM attempt to install your just created package. As
+for any package, you do it by hand with:
 ```
 $ opam install <project> --verbose
 ```
@@ -147,7 +139,7 @@ If you need to change anything, simply do
 ```
 opam pin edit <project>
 ```
-to get back to editing the `opam` file. Manually editing the `opam/opam` file in
+to get back to editing the `opam` file. Manually editing the `opam` file in
 your source tree also works.
 
 So far, so good ! You may have missed dependencies in case they were already
@@ -158,13 +150,13 @@ OPAM repository, so don't worry.
 ## Getting a full OPAM package
 
 There are still two things missing for a complete package.
-- An appealing description. Put it in a simple utf-8 text file `opam/descr`.
+- An appealing description. Put it in a simple utf-8 text file named `descr`.
   Like for git commits, the first line is a short summary, and a longer text may
   follow.
 - An URL where OPAM may download the project source for the release. If your
   project is hosted on github, pushing `TAG` will automatically provide
   https://github.com/me/project/archive/TAG.zip. This shoud be put in
-  `opam/url`, which has a format similar to `opam`:
+  an `url` file, with a format similar to that of `opam`:
 
         archive: "https://address/of/project.1.0.tar.gz"
         checksum: "3ffed1987a040024076c08f4a7af9b21"
@@ -189,13 +181,14 @@ Here is how to do it from scratch:
    the top right corner (you may be asked to login or register)
 2. Get the `clone URL` on the right, and, from the shell, run `git clone <url>`
    to get your local copy
-3. Now we'll add the new package description into
-   `opam-repository/packages/<project>/<project>.<version>/` and make that a git
-   commit:
+3. Now we'll add the new package description (`opam`, `descr` and `url` files)
+   into `opam-repository/packages/<project>/<project>.<version>/` and make that
+   a git commit:
 
         $ cd opam-repository/packages
         $ mkdir -p <project>/<project>.<version>
-        $ cp <project-src>/opam/* <project>/<project>.<version>
+        $ cp <project-src>/opam <project>/<project>.<version>
+        $ cp <path-to>/url <path-to>/descr <project>/<project>.<version>
         $ git add <project>
         $ git commit -m "Added new fancy <project>.<version>"
 
