@@ -1,3 +1,26 @@
+## TL;DR
+
+Create a local package from the current directory
+```
+$ opam pin add <name> .
+```
+
+Get a local copy of an existing package and install from there
+```
+$ opam source <package> --pin
+```
+
+Get it back to normal
+```
+$ opam pin remove <package>
+```
+
+Publish to the OPAM repository:
+* Fork https://github.com/ocaml/opam-repository
+* Add your `opam`, `descr` and `url` files to `packages/<pkgname>/<pkgname>.<version>`
+* File a pull-request
+
+
 # Creating OPAM packages
 
 An OPAM package is basically just a bunch of data on a software project:
