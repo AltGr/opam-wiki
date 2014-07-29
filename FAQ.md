@@ -51,8 +51,23 @@ packages when your system compiler changes.
 
 #### Can I work on different switches at the same time in different shells ?
 
-Yes. Use `eval $(opam config env --switch <switch>)`, or `opam switch exec
+Yes. Use `eval $(opam config env --switch <switch>)`, or `opam config exec
 --switch <switch> <command>`. This only affects the environment.
+
+
+#### Can I get a new switch with the same packages installed ?
+
+Yes. Use:
+```
+opam switch export file.export  # from the previous switch
+opam switch <new switch>
+opam switch import file.export
+```
+
+OPAM might fail if you had packages installed that are not compatible with the
+OCaml version in your new switch. In that case, you'll need to remove them from
+the `file.export` file by hand (the format is straight-forward, one line per
+package).
 
 
 #### I installed a package by hand / used `ocamlfind remove` / fiddled with the
@@ -71,7 +86,8 @@ there are several ways you can recover:
   recommended though, as your manual install may not be exactly equivalent to
   the one expected by other OPAM packages, and OPAM may later on trigger
   reinstallations or upgrades of the package. Don't complain if you mess up your
-  installation using this!
+  installation using this! If you want to control how a package is installed or
+  modify it, the right way is `opam pin`.
 
 
 #### What are the minimum requirements ?
