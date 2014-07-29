@@ -15,8 +15,10 @@ opam search QUERY       # List packages with QUERY in their name or description
 opam info PACKAGE       # Display information about PACKAGE
 ```
 
-Another option to obtain information on packages is to browse the
-[Packages](../pkg/index.html) section of the [OPAM website](http://opam.ocamlpro.com/).
+You may prefer to [browse them online](https://opam.ocaml.org/packages). If you
+find a package there but not on your computer, either it has been recently added
+and you should simply run `opam update`, or it's not available on your system or
+OCaml version -- `opam install PACKAGE` should give you the reason.
 
 ## Installing a package
 
@@ -38,6 +40,6 @@ opam upgrade            # Re-install packages that were updated since last upgra
 
 ## Do more with OPAM
 
-To learn how to use more advanced features of OPAM (version pinning, multiple
-repositories, multiple compilers...), move on to the
-[Advanced Usage](Advanced_Usage.html) guide.
+To learn how to use more advanced features of OPAM (package pinning, multiple
+repositories, multiple compilers...), move on to the [Advanced
+Usage](Advanced_Usage.html) guide, or the [Packaging tutorial](Packaging.html).

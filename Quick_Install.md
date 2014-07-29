@@ -92,13 +92,9 @@ Sources of the latest stable version of OPAM are available on [Github](https://g
 * [1.1.1](https://github.com/ocaml/opam/releases/download/1.1.1/opam-full-1.1.1.tar.gz) MD5 (opam-full-1.1.1.tar.gz) = a7bebe947b3e6c1c10ccafabb839d374
 * [1.1.0](http://www.ocamlpro.com/pub/opam-full-1.1.0.tar.gz) MD5 (opam-full-1.1.0.tar.gz) = d6e2f56b10c0be73b5677963e6659d24
 
-Once the archive downloaded and extracted, you can then run the usual commands:
+Follow the instructions in `README.md` to get OPAM built and installed from
+there.
 
-```
-./configure && make && make install
-```
-
-See [Advanced Install](Advanced_Install.html) guide for more information.
 
 #### Using ocamlbrew
 

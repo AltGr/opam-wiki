@@ -44,9 +44,9 @@ or different sets of packages. See `opam switch --help`. The "prefix" for a
 given installation is simply `~/.opam/<switch-name>`.
 
 A switch is either based on a system-wide OCaml installation, or on a local
-installation. In the latter case, OCaml will be downloaded and compiled on
-creation of the switch. In the former case, OPAM will need to recompile all
-packages when your system compiler changes.
+installation. In the former case, OPAM will need to recompile all packages when
+your system compiler changes. In the latter case, OCaml will be downloaded and
+compiled on creation of the switch.
 
 
 #### Can I work on different switches at the same time in different shells ?
@@ -93,7 +93,8 @@ there are several ways you can recover:
 #### What are the minimum requirements ?
 
 1GB of memory should be all you need. It was reported that you may run into
-problems with 512MB of RAM and no swap.
+problems with 512MB of RAM and no swap. Of course, software packages themselves
+may be more greedy.
 
 
 #### Some package complains about missing dependencies (m4, libgtk, etc.) during
@@ -116,10 +117,13 @@ have no idea what the missing system package might be:
 
 First of all, you should update your repositories (`opam update`).
 
-If this doesn't work (or if you get the checksum errors while running `opam init`) this comes probably a badly configured proxy cache that is serving stale files. To clear your proxy cache, you can use `wget --no-cache <remote-file>` and then you can retry.
+If this doesn't work (or if you get the checksum errors while running `opam
+init`) this comes probably a badly configured proxy cache that is serving stale
+files. To clear your proxy cache, you can use `wget --no-cache <remote-file>`
+and then you can retry.
 
 If this doesn't work as well, you can bypass the checksum checks using
-`-no-checksums`.
+`--no-checksums`.
 
 
 #### I read somewhere about `opam-admin`, `opam-installer`, etc., but can't find
@@ -131,13 +135,16 @@ Install package opam-tools within OPAM. [TODO]
 
 #### Where do I report Bugs, Issues and Feature Requests?
 
-Bug reports and feature requests for the OPAM tool should be reported on [OPAM's
-issue-tracker](https://github.com/ocaml/opam/issues). Packaging issues or
-requests for a new package can be reported on the [official repository's
+- Bug reports and feature requests for the OPAM tool should be reported on
+[OPAM's issue-tracker](https://github.com/ocaml/opam/issues).
+
+- Packaging issues or requests for a new package can be reported on the
+[official repository's
 issue-tracker](https://github.com/ocaml/opam-repository/issues).
 
-General queries for both the tool and the packages can be addressed on the
+- General queries for both the tool and the packages can be addressed on the
 [OCaml-platform mailing-list](http://lists.ocaml.org/listinfo/platform) and
 insights and evolution of OPAM internals can discussed on the [OPAM-devel
 mailing-list](http://lists.ocaml.org/listinfo/opam-devel).
 
+- You may also try IRC channel `#opam` on Freenode.
