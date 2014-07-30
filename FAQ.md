@@ -126,11 +126,16 @@ If this doesn't work as well, you can bypass the checksum checks using
 `--no-checksums`.
 
 
-#### I read somewhere about `opam-admin`, `opam-installer`, etc., but can't find
-     them Where are they ?
+#### I am not happy with the solution proposed by OPAM. What can I do ?
 
-You probably used a one-shot package for OPAM, containing only the main program.
-Install package opam-tools within OPAM. [TODO]
+- You can be more explicit in your request (`opam upgrade PACKAGES`, `opam
+  install 'PACKAGE>=VERSION' PACKAGE...`, etc.)
+- Action resolution in a package set is known to be a NP-complete problem; OPAM
+  uses state-of-the-art algorithms through an external, dedicated solver: make
+  sure you have the latest version of [aspcud](http://potassco.sourceforge.net/)
+  installed.
+- Another benefit of the external solvers is that they allow to be [quite
+  expressive](Specifying_Solver_Preferences.html) on your expectations.
 
 
 #### Where do I report Bugs, Issues and Feature Requests?
