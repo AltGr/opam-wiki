@@ -3,9 +3,9 @@
 > packages make it to your distribution, we'll keep updating as it goes. If you
 > don't want to wait:
 >
-> - [install from source](#h2-FromSources)
+> - [install from source](#FromSources)
 >
-> - or use the [binary installer](#h2-Binaryinstaller).
+> - or use the [binary installer](#Binaryinstaller).
 
 # Install OPAM in 2 minutes
 
@@ -23,7 +23,7 @@ available. Here is a list of supported distributions:
 The [opam](http://aur.archlinux.org/packages.php?ID=62127) and [opam-git](http://aur.archlinux.org/packages.php?ID=62387) packages are available in the [AUR](https://wiki.archlinux.org/index.php/AUR). Replace `opam` with `opam-git` in the following instruction to get the development version:
 
 ```
-  yaourt -S opam
+yaourt -S opam
 ```
 
 #### Debian
@@ -31,7 +31,7 @@ The [opam](http://aur.archlinux.org/packages.php?ID=62127) and [opam-git](http:/
 Binary packages of OPAM 1.1.1 are available for the [testing](http://packages.debian.org/jessie/opam) and [unstable](http://packages.debian.org/sid/opam) distributions.  Wheezy users are left with the options of compiling from source, pinning the packages from the testing repository, requesting a backport from Debian, or using our binary installer below.
 
 ```
-  apt-get install opam
+apt-get install opam
 ```
 
 #### [Exherbo](http://exherbo.org)
@@ -44,7 +44,7 @@ You might need to add the `::ocaml-unofficial` repository first: `cave resolve -
 The opam package for Mageia can be installed with the command:
 
 ```
-  urpmi opam
+urpmi opam
 ```
 
 #### OSX
@@ -52,9 +52,9 @@ The opam package for Mageia can be installed with the command:
 OPAM packages for [homebrew](http://mxcl.github.com/homebrew/) and [MacPorts](http://www.macports.org/) are available:
 
 ```
-  brew install opam                   # using Homebrew on OSX Mavericks
-  brew install opam --without-aspcud  # using Homebrew on OSX Mountain Lion (or lower)
-  port install opam                   # using MacPort
+brew install opam                   # using Homebrew on OSX Mavericks
+brew install opam --without-aspcud  # using Homebrew on OSX Mountain Lion (or lower)
+port install opam                   # using MacPort
 ```
 
 See also [howto setup Emacs.app](https://github.com/ocaml/opam/wiki/Setup-Emacs.app-on-macosx-for-opam-usage) for opam usage.
@@ -62,9 +62,9 @@ See also [howto setup Emacs.app](https://github.com/ocaml/opam/wiki/Setup-Emacs.
 #### Ubuntu (Precise, Quantal, Raring and Saucy)
 
 ```
-  add-apt-repository ppa:avsm/ppa
-  apt-get update
-  apt-get install ocaml opam
+add-apt-repository ppa:avsm/ppa
+apt-get update
+apt-get install ocaml opam
 ```
 
 There are also PPAs available that are [pinned to specific revisions](http://launchpad.net/~avsm) of OCaml and OPAM to help with [automated testing](http://anil.recoil.org/2013/09/30/travis-and-ocaml.html).
@@ -76,8 +76,8 @@ If the command `add-apt-repository` is not available, you can install the packag
 OCaml 4.01.0 and OPAM 1.1.1 are included in Ubuntu Trusty's `universe` repository, so just install them as normal.
 
 ```
-  apt-get update
-  apt-get install ocaml ocaml-native-compilers camlp4-extra opam
+apt-get update
+apt-get install ocaml ocaml-native-compilers camlp4-extra opam
 ```
 
 ## Binary installer
@@ -87,14 +87,14 @@ Pre-compiled versions for most common architectures and OSes are available on [t
 Download [opam_installer.sh](https://raw.github.com/ocaml/opam/master/shell/opam_installer.sh) and run it as follows:
 
 ```
-  sh <path to>/opam_installer.sh /usr/local/bin
+sh <path to>/opam_installer.sh /usr/local/bin
 ```
 
 You can also specify which version of OCaml you want to install:
 
 ```
-  sh ./opam_installer.sh /usr/local/bin 3.12.1 # Install the latest OPAM and OCaml 3.12.1
-  sh ./opam_installer.sh /usr/local/bin system # Install the latest OPAM using the system compiler (if any)
+sh ./opam_installer.sh /usr/local/bin 3.12.1 # Install the latest OPAM and OCaml 3.12.1
+sh ./opam_installer.sh /usr/local/bin system # Install the latest OPAM using the system compiler (if any)
 ```
 
 ## From Sources

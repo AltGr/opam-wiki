@@ -7,19 +7,16 @@ If you are a developper and want to get a project packaged or change an existing
 package, see the [step-by-step guide](Packaging.html)
 
 The full documentation is available inline, using
+
 ```
 opam --help
-```
-
-or
-```
 opam <command> --help
 ```
 
 This document is intended as a quicker overview, use the above to dig into the
 details.
 
-#### ``opam init``
+### opam init
 
 OPAM needs to initialise its internal state in a `~/.opam` directory to work.
 This command can also take care of installing a version of OCaml if needed.
@@ -28,53 +25,57 @@ To operate as expected, some variables need to be set in your environment. You
 will be prompted to update your configuration, and given instructions on how
 to proceed manually if you decline.
 
-#### ``opam update``
+### opam update
 
 This command synchronises OPAM's database with the package repositories. The
 lists of available packages and their details are stored into
 `~/.opam/repo/<name>`. Remember to run this regularly if you want to keep
 up-to-date, or if you are having trouble with a package.
 
-#### Looking up packages
+### Looking up packages
 
 There are three useful commands for that:
-- `opam list` List installed packages, or packages matching a pattern
-- `opam search` Search in package descriptions
-- `opam show` Print details on a given package.
+* `opam list` List installed packages, or packages matching a pattern
+* `opam search` Search in package descriptions
+* `opam show` Print details on a given package.
 
-#### ``opam install``
+### opam install
 
 This command installs packages along with all their dependencies. You can
 specify one or several packages, along with version constraints (e.g. `lwt`,
-`ocp-index.1.0.2`, `'ocamlfind>=1.4.0'`.
+`ocp-index.1.0.2`, `'ocamlfind>=1.4.0'`).
 
-#### ``opam upgrade``
+### opam upgrade
 
 Will attempt to upgrade the installed packages to their newest versions. You
 should run it after `opam update`, and may use `opam pin` to prevent specific
 packages from being upgraded.
 
-#### ``opam switch``
+### opam switch
 
 This command enables the user to have several installations on disk, each with
 their own prefix, set of installed packages, and OCaml version. Use cases
 include having to work or test with different OCaml versions, keeping separate
 development environments for specific projects, etc.
 
-Use `opam switch <version>` to _switch_ to a different OCaml version, or `opam
-switch <name> --alias-of <version>` to name the new _switch_ as you like. Don't
+Use `opam switch <version>` to __switch__ to a different OCaml version, or `opam
+switch <name> --alias-of <version>` to name the new __switch__ as you like. Don't
 forget to run the advertised `eval $(opam config env)` to update your PATH
 accordingly.
 
 Creating a new switch requires re-compiling OCaml, unless you make it an alias
 of the "system" switch, relying on the global OCaml installation.
 
-#### ``opam pin``
+There are a bunch of specific or experimental OCaml compiler definitions on the
+official repository, list them all with `opan switch list --all`.
+
+### opam pin
 
 This command allows to pin a package to a specific version, but in fact, as you
 know if you've read the [Packaging guide](Packaging.html), it can do much more.
 
 The syntax is
+
 ```
 opam pin add <package name> <target>
 ```
@@ -87,17 +88,18 @@ upstream. If the upstream includes OPAM metadata, that will be used as well.
 
 This can be used in conjunction with `opam source` to start and hack an existing
 package before you know it:
+
 ```
 opam source <package> --dev-repo --pin
 cd <package>; hack hack hack;
 opam upgrade <package>
 ```
 
-#### ``opam repo``
+### opam repo
 
 OPAM is configured by default to use the community's software repository at
-https://github.com/ocaml/opam-repository, but this can easily be changed at
-`opam init` time or later.
+[opam.ocaml.org](https://opam.ocaml.org), but this can easily be
+changed at `opam init` time or later.
 
 `opam repo add <name> <address>` will make OPAM use the definitions of any
 package versions defined at `<address>`, falling back to the previously defined

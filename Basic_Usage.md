@@ -12,7 +12,7 @@ packages:
 ```
 opam list -a            # List all available packages
 opam search QUERY       # List packages with QUERY in their name or description
-opam info PACKAGE       # Display information about PACKAGE
+opam show PACKAGE       # Display information about PACKAGE
 ```
 
 You may prefer to [browse them online](https://opam.ocaml.org/packages). If you
