@@ -1,4 +1,4 @@
-## TL;DR
+## Tl;dr
 
 Create a local package from the current directory
 
@@ -19,9 +19,9 @@ $ opam pin remove <package>
 ```
 
 Publish to the OPAM repository:
-* Fork https://github.com/ocaml/opam-repository
+* Fork [https://github.com/ocaml/opam-repository]
 * Add your `opam`, `descr` and `url` files to `packages/<pkgname>/<pkgname>.<version>`
-* File a pull-request
+* File a [pull-request](https://github.com/ocaml/opam-repository/compare/)
 
 
 # Creating OPAM packages

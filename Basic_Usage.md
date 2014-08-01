@@ -4,6 +4,15 @@ This short tutorial covers the very basic use cases to get you started with
 OPAM. A more lengthy introduction can be found in the
 [Advanced Usage](Advanced_Usage.html) guide.
 
+## Initialising OPAM
+
+```
+opam init
+```
+
+This will create the `~/.opam` directory, within which packages will be
+installed and where OPAM will store its data.
+
 ## Browsing available packages
 
 The following commands will enable you to obtain information on available
@@ -39,6 +48,12 @@ opam upgrade            # Re-install packages that were updated since last upgra
 ```
 
 ## Do more with OPAM
+
+If you need more details and options, OPAM is self-documented through
+
+```
+opam --help
+```
 
 To learn how to use more advanced features of OPAM (package pinning, multiple
 repositories, multiple compilers...), move on to the [Advanced

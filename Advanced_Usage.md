@@ -4,7 +4,7 @@ This document covers most of the common OPAM features. If you're looking for a
 quick introduction, check the [Basic Usage](Basic_Usage.html) tutorial first.
 
 If you are a developper and want to get a project packaged or change an existing
-package, see the [step-by-step guide](Packaging.html)
+package, see the step-by-step [packaging guide](Packaging.html)
 
 The full documentation is available inline, using
 
@@ -42,8 +42,13 @@ There are three useful commands for that:
 ### opam install
 
 This command installs packages along with all their dependencies. You can
-specify one or several packages, along with version constraints (e.g. `lwt`,
-`ocp-index.1.0.2`, `'ocamlfind>=1.4.0'`).
+specify one or several packages, along with version constraints. E.g:
+
+```
+opam install lwt
+opam install ocp-indent ocp-index.1.0.2
+opam install "ocamlfind>=1.4.0"
+```
 
 ### opam upgrade
 
@@ -58,8 +63,8 @@ their own prefix, set of installed packages, and OCaml version. Use cases
 include having to work or test with different OCaml versions, keeping separate
 development environments for specific projects, etc.
 
-Use `opam switch <version>` to __switch__ to a different OCaml version, or `opam
-switch <name> --alias-of <version>` to name the new __switch__ as you like. Don't
+Use `opam switch <version>` to _switch_ to a different OCaml version, or `opam
+switch <name> --alias-of <version>` to name the new _switch_ as you like. Don't
 forget to run the advertised `eval $(opam config env)` to update your PATH
 accordingly.
 
@@ -85,6 +90,13 @@ even a git, mercurial or darcs URL. The package will be kept up-to-date with its
 origin on `opam update` and when explicitely mentionned in a command, so that
 you can simply run `opam upgrade <package name>` to re-compile it from its
 upstream. If the upstream includes OPAM metadata, that will be used as well.
+
+```
+opam pin add camlpdf 1.7                                      # version pin
+opam pin add camlpdf ~/src/camlpdf                            # path
+opam pin add opam-lib https://github.com/ocaml/opam.git#1.2   # specific branch or commit
+opam pin add opam-lib --dev-repo                              # upstream repository
+```
 
 This can be used in conjunction with `opam source` to start and hack an existing
 package before you know it:

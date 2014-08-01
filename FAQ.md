@@ -136,7 +136,7 @@ stale files. To clear your proxy cache, you can use `wget --no-cache
 As a last resort, you can bypass the checksum checks using `--no-checksums`.
 
 
-#### → I am not happy with the solution proposed by OPAM. What can I do ?
+#### → OPAM is prompting me to install or upgrade packages that I am not interested in, or doesn't install the latest version by default. Why ? What can I do ?
 
 * You can be more explicit in your request (`opam upgrade PACKAGES`, `opam
   install 'PACKAGE>=VERSION' PACKAGE...`, etc.)
