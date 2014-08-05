@@ -167,16 +167,16 @@ There are still two things missing for a complete package.
   https://github.com/me/project/archive/TAG.zip. This shoud be put in
   an `url` file, with a format similar to that of `opam`:
 
-      ```
-  archive: "https://address/of/project.1.0.tar.gz"
-  checksum: "3ffed1987a040024076c08f4a7af9b21"
-  ```
+    ```
+    archive: "https://address/of/project.1.0.tar.gz"
+    checksum: "3ffed1987a040024076c08f4a7af9b21"
+    ```
 
   The checksum is a simple md5 of the archive, which you can obtain with:
 
-      ```
-  curl -L "https://address/of/project.1.0.tar.gz" | md5sum
-  ```
+    ```
+    curl -L "https://address/of/project.1.0.tar.gz" | md5sum
+    ```
 That's it !
 
 ## Publishing
@@ -226,9 +226,9 @@ source if any, but otherwise only what is in the OPAM repository matters. Use
 * You may skip the first step and pin to a remote version-controlled
   repository directly, using for example
 
-      ```
-  $ opam pin add <project> git://github.com/me/project.git
-  ```
+    ```
+    $ opam pin add <project> git://github.com/me/project.git
+    ```
 
 * OPAM will propose to save your opam file back to your source, but if you want
   to take a peek at the internal version it's at
@@ -236,9 +236,9 @@ source if any, but otherwise only what is in the OPAM repository matters. Use
   --raw`.
 * You can set OPAM to use your local clone of the repository with
 
-      ```
-  $ opam repository add my-dev-repo path/to/opam-repository
-  ```
+    ```
+    $ opam repository add my-dev-repo path/to/opam-repository
+    ```
   Don't forget to `opam pin remove <project>`, and test your changes to the repo
   directly. You'll also need to `opam update my-dev-repo` each time to keep OPAM
   in sync (`opam update` synches all repos, this will be faster).
@@ -249,9 +249,9 @@ source if any, but otherwise only what is in the OPAM repository matters. Use
   Joe's GitHub pull-request present on his branch `new-feature` on his fork of
   `project`, just do
 
-      ```
-  $ opam pin project git://github.com/Joe/project.git#new-feature
-  ```
+    ```
+    $ opam pin project git://github.com/Joe/project.git#new-feature
+    ```
   and OPAM will use that to get the source (and possibly updated metadata) of
   the package; this works with any branch of any git repo, it's not github
   specific.
@@ -278,9 +278,9 @@ into too much details, here are some of the most useful features:
   determines your package availability based on the os, OCaml version or other
   constraints. For example:
 
-      ```
-  available: [ os != "darwin" | ocaml-version >= "4.00" ]
-  ```
+    ```
+    available: [ os != "darwin" | ocaml-version >= "4.00" ]
+    ```
 * **Conflicts**: some packages just can't coexist. The `conflicts` field is a
   list of packages, with optional version constraints.
 * **Optional dependencies**: they change the way your package builds, but are
@@ -293,11 +293,11 @@ into too much details, here are some of the most useful features:
   omitted depending on the environment. This uses the same optional argument
   syntax as above, postfix curly braces, with boolean conditions:
 
-      ```
-  ["./configure" "--with-foo" {ocaml-version > "3.12"} "--prefix=%{prefix}%"]
-  [make "byte"] { !ocaml-native }
-  [make "native"] { ocaml-native }
-  ```
+    ```
+    ["./configure" "--with-foo" {ocaml-version > "3.12"} "--prefix=%{prefix}%"]
+    [make "byte"] { !ocaml-native }
+    [make "native"] { ocaml-native }
+    ```
 
 For more, see the
 [OPAM Developer's Manual](https://github.com/ocaml/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true)
