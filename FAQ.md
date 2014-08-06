@@ -163,3 +163,16 @@ insights and evolution of OPAM internals can discussed on the [OPAM-devel
 mailing-list](http://lists.ocaml.org/listinfo/opam-devel).
 
 - You may also try IRC channel `#opam` on Freenode.
+
+
+#### → How to link to libraries installed with OPAM ?
+
+The standard way of doing this is to use
+[ocamlfind](http://opam.ocaml.org/packages/ocamlfind/ocamlfind.1.5.1/), which is
+orthogonal to OPAM: `ocamlfind query <lib>`.
+
+Your libraries are installed to the directory returned by ``opam config var
+lib``, which is by default `~/.opam/<switch>/lib`. Note that using `ocamlc`'s
+option `-I +dir` will make `dir` relative to `lib/ocaml`, and will only work for
+the libraries that ship with the compiler. Also, remember to add the dependency when
+you package your project !
