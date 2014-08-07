@@ -1,7 +1,7 @@
 # Creating OPAM packages
 
 In this tutorial, you will learn how to package an OCaml library or
-software for OPAM. The first section will introduce you the *ounit*
+software for OPAM. The first section will introducpde you the *ounit*
 OPAM package. Albeit simple, it is a real example of what an OPAM
 package is, and actually most packages in the OPAM repository are that
 simple. The second section will be a comprehensive guide illustrated
@@ -84,7 +84,7 @@ description starting from the second line.
 
 The full ABNF specification of the syntax for *opam* files is
 available in OPAM
-[developer manual](https://github.com/ocaml/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true).
+[developer manual](https://github.com/ocaml/opam/blob/latest/doc/dev-manual/dev-manual.pdf?raw=true).
 In this file,
 `opam-version` MUST be `1`, and you should put your email in the
 `maintainer` field. `build` has OCaml type `string list list`, and
@@ -363,7 +363,7 @@ may find it easier to generate this file manually than figuring out
 how to dynamically generate it with their build system.
 
 For comprehensive information about this facility refer to the Section 1.2.5 of OPAM
-[developer manual](https://github.com/ocaml/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true)
+[developer manual](https://github.com/ocaml/opam/blob/latest/doc/dev-manual/dev-manual.pdf?raw=true)
 
 ## Compiler version constraints
 
@@ -431,7 +431,7 @@ Although this tutorial covered most packaging cases, there are still
 packages that requires more tuning that what have been described
 above. If you find yourself stuck trying to package a software or a
 library, please read the OPAM
-[developer manual](https://github.com/ocaml/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true)
+[developer manual](https://github.com/ocaml/opam/blob/latest/doc/dev-manual/dev-manual.pdf?raw=true)
 (you will find it in the
 `doc` directory in the OPAM tarball) and/or read existing OPAM
 package descriptions for inspiration.
