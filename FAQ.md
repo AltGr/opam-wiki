@@ -13,7 +13,7 @@ OPAM has git-like, hierarchical manpages. Try `opam --help` for a starting point
 Get started with OPAM packages by reading the [Packaging Howto](Packaging.html).
 
 See the details on the file formats and more in the [Developper
-Guide](https://github.com/ocaml/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true)
+Guide](https://github.com/ocaml/opam/blob/latest/doc/dev-manual/dev-manual.pdf?raw=true)
 (pdf).
 
 

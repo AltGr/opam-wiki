@@ -300,4 +300,4 @@ into too much details, here are some of the most useful features:
     ```
 
 For more, see the
-[OPAM Developer's Manual](https://github.com/ocaml/opam/blob/master/doc/dev-manual/dev-manual.pdf?raw=true)
+[OPAM Developer's Manual](https://github.com/ocaml/opam/blob/latest/doc/dev-manual/dev-manual.pdf?raw=true)
