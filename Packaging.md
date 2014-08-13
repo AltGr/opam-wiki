@@ -107,7 +107,7 @@ build: [
 You should adapt this to the required commands to build your package,
 and each line contains the shell commands corresponding to a
 `string list`. Note that `make` is a special variable which will be
-automatically translated to either `make` on linux and OSX or `gmake'
+automatically translated to either `make` on linux and OSX or `gmake`
 on BSD systems.
 
 The `remove` field follows the same syntax as the `build` field. The
