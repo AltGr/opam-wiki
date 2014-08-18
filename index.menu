@@ -1,0 +1,18 @@
+# Contains the documentation menu with the following syntax:
+# <string> without extension -> A menu title
+# <string>.md -> A markdown page
+# empty <string> -> A menu divider
+Primer
+Quick_Install.md
+Basic_Usage.md
+Specifying_Solver_Preferences.md
+FAQ.md
+
+Go Further
+Advanced_Install.md
+Advanced_Usage.md
+Developing.md
+
+For Packagers
+Packaging.md
+
