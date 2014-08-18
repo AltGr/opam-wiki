@@ -16,7 +16,7 @@ opam info PACKAGE       # Display information about PACKAGE
 ```
 
 Another option to obtain information on packages is to browse the
-[Packages](../pkg/index.html) section of the [OPAM website](http://opam.ocamlpro.com/).
+[Packages](../packages/index.html) section of the [OPAM website](http://opam.ocamlpro.com/).
 
 ## Installing a package
 
