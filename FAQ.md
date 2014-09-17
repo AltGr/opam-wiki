@@ -63,7 +63,7 @@ One option is to have a very high version, so that any packages with a lower bou
 
 `opam-admin` is installed as part of OPAM, so you'll need to install from source.  However, you don't actually need to create a repository unless you want to host a mirror of the tarballs. Simply try this:
 
-````
+```
 $ mkdir -p my-repo/packages
 $ opam remote add localdev my-repo
 <create your package inside my-repo/packages/>
