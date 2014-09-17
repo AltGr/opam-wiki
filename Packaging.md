@@ -1,7 +1,7 @@
 # Creating OPAM packages
 
 In this tutorial, you will learn how to package an OCaml library or
-software for OPAM. The first section will introducpde you the *ounit*
+software for OPAM. The first section will introduce you to the *ounit*
 OPAM package. Albeit simple, it is a real example of what an OPAM
 package is, and actually most packages in the OPAM repository are that
 simple. The second section will be a comprehensive guide illustrated
@@ -452,7 +452,7 @@ for it.
 
 If the above sentence makes no sense for you, you probably don’t know
 about either *git* or *github* (or both). *git* is a distributed
-version control system, very popular at the time we write those
+version control system, very popular at the time we write these
 lines. Getting started with git is definitely a topic outside the
 scope of this short tutorial, but you can read about it on git’s
 [documentation](http://git-scm.com/documentation) page.
